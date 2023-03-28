@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo&family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+/*
+font-family: 'Heebo',
+sans-serif;
+font-family: 'Noto Sans KR',
+sans-serif;
+
+
+*/
+
+.App {
+  text-align: center;
+
+overflow-x: hidden;
+  overflow-y: hidden;
+}
+.arrow {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  color: white;
+}
+.arrow_1 {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  color: black;
+}
+
+.final {
+  width: 100%;
+  height: 80%;
+  background-color: #1b1b1b;
+  flex-direction: row;
+  display: flex;
+  margin-top: 50px;
+  position: relative;
+}
+.final-main {
+  width: 70%;
+  height: 100%;
+}
+.second-text-main {
+  width: 100%;
+
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.second-main {
+  width: 100%;
+  height: 80%;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  flex-direction: row;
+
+  display: flex;
+  position: relative;
+}
+
+.first-main-sub2 {
+  width: 60%;
+  height: 30%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.macoo {
+  font-family: "Heebo", sans-serif;
+  color: white;
+  position: absolute;
+  font-size: 100px;
+  bottom: 0px;
+  margin: 0;
+  right: 10px;
+}
+
+.second-text {
+  width: 50%;
+  height: 100%;
+  background-color: white;
+}
+.second-text-1{
+
+    width: 50%;
+      height: 100%;
+      background-color: #1b1b1b;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+}
+.ss-text{
+
+  margin: 0;
+    font-family: "Noto Sans KR", sans-serif;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+
+}
+.sss-text {
+
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+
+}
+.black-p {
+  font-family: "Heebo", sans-serif;
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+  margin-left: 30px;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+}
+.macc-p {
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  color: black;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.bike--p {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+}
+.bike-text {
+  width: 100%;
+  height: 13vh;
+
+  justify-content: center;
+  align-items: flex-end;
+}
+.Bike-p {
+  font-family: "Heebo", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+.black-q {
+  font-family: "Noto Sans KR", sans-serif;
+
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 15px;
+}
+.ma--p {
+  font-family: "Noto Sans KR", sans-serif;
+
+  margin-bottom: auto;
+  font-size: 16px;
+  text-align: start;
+}
+.second-p {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+}
+.fi-p {
+  font-family: "Noto Sans KR", sans-serif;
+  color: white;
+  font-size: 50px;
+  position: absolute;
+  font-weight: bold;
+  right: 60px;
+  top: 20%;
+}
+.fi-pp {
+  font-family: "Noto Sans KR", sans-serif;
+  color: white;
+  font-size: 25px;
+  position: absolute;
+
+  right: 60px;
+  top: 50%;
+}
+.second-image {
+  width: 50%;
+  height: 100%;
+  background-color: #1b1b1b;
+  position: relative;
+}
+.second-image-1{
+
+    width: 50%;
+      height: 100%;
+      background-color: white;
+      position: relative;
+}
+
+
+
+.black-p-p {
+  font-family: "Noto Sans KR", sans-serif;
+  color: white;
+  font-size: 16px;
+
+  margin-left: 30px;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+}
+.nav_1 {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-family: "Heebo", sans-serif;
+}
+.nav-p {
+  font-size: 15px;
+  color: white;
+  margin-top: auto;
+  font-weight: bold;
+  margin-bottom: auto;
+}
+.nav_1 p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 15px;
+  margin-right: 10px;
+  font-family: "Heebo", sans-serif;
+}
+.first-main-sub1 {
+  width: 80%;
+  height: 100%;
+
+  position: relative;
+  overflow: hidden;
+}
+.nav_11 {
+  width: 40%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.final-main {
+  font-family: "Heebo", sans-serif;
+  font-size: 20px;
+  text-align: start;
+  font-weight: bold;
+  color: white;
+}
+.final-fianl-p {
+  font-family: "Heebo", sans-serif;
+  font-size: 15px;
+  text-align: start;
+
+  color: white;
+}
+.first-main {
+  width: 100%;
+  height: 57vh;
+  background-color: #1b1b1b;
+  display: flex;
+  overflow-x: scroll;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.first-main-sub2 {
+  width: 100%;
+  height: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.grid_div {
+  width: 80%;
+  height: "45vh";
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.tumb {
+width: 100%;
+  height: 270px;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #1b1b1b;
+}
+
+.tumb_active{
+  width: 100%;
+      height: 270px;
+      background-color:#1b1b1b;
+      border-style: solid;
+      border-width: 1px;
+      border-color: #1b1b1b;
+}
+
+
+.tumb_text {
+  width: "20%";
+
+  height: 50px;
+}
+.main-grid {
+  width: 100%;
+}
+.img-1 {
+  width: 60vw;
+  height: 63vh;
+  position: absolute;
+  right: 5px;
+  top: 0px;
+}
+.first-main-left {
+  width: 65%;
+}
+.grid_div {
+  grid-template-columns: repeat(4, 1fr);
+}
