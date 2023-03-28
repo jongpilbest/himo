@@ -2,7 +2,7 @@
 
 import machine_1 from '../assets/machine_1.svg'
 import logo from './logo.svg';
-
+import Nav from './nav';
 import Sub_Com from './Sub_Com';
 import './Main.css'
 import { AiOutlineMore } from "react-icons/ai";
@@ -92,75 +92,10 @@ const Main = function ({ }) {
 
 
 
+
   return (
     <div className="App">
-      <nav style={{
-        width: '100%',
-        height: '7vh',
-        // backgroundColor: 'blue',
-        display: 'flex',
-        justifyContent: 'center',
-        flexDirection: 'row',
-
-      }} >
-        <div
-          className='nav_1'
-        >
-          <img
-            style={{
-              width: '110px',
-              height: '25px',
-              marginLeft: '40px'
-
-            }}
-
-            src={require('../assets/logo.png')}></img>
-          <div
-            style={{
-
-              width: '30%',
-              heigth: '100%',
-              //backgroundColor: 'pink',
-              display: 'flex',
-              marginLeft: '10%'
-
-
-            }}
-          >
-
-            <div className='nav_11'>
-              <p
-
-
-                className='main-text'
-              >E -Bike</p>
-
-            </div>
-            <div className='nav_11'>
-              <p
-
-                className='main-text'
-              >Accessori</p>
-
-            </div>
-            <div className='nav_11'>
-              <p
-
-                className='main-text'
-              >Support</p>
-
-            </div>
-          </div>
-
-
-        </div>
-
-
-
-
-
-
-      </nav>
+      <Nav></Nav>
       <div className='first-main'>
         <div className='first-main-sub1'>
           <div style={gogo()}
@@ -333,7 +268,8 @@ const Main = function ({ }) {
       <div style={{
         width: '100%',
         height: '55vh',
-
+        marginTop: '50px',
+        marginBottom: '50px',
         display: 'flex',
         justifyContent: 'center'
 

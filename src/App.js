@@ -1,12 +1,16 @@
 
 
 import Main from './Component/Main';
+
+import Bike_inner from './Bike_page/Bike_inner';
+
 function App() {
 
 
 
   return (
-    <Main></Main>
+
+    <Bike_inner></Bike_inner>
   );
 }
 
