@@ -4,49 +4,93 @@
 import React, { useState, useEffect, useContext, useRef } from "react"
 import './Bike.css'
 import Nav from "../Component/nav"
-import Bike from '../assets/bike.svg'
+import { AiOutlineInstagram } from "react-icons/ai";
+import { RiKakaoTalkFill } from "react-icons/ri";
+import { AiFillTwitterCircle, AiTwotoneCheckCircle } from "react-icons/ai";
+import Bike_COm from "./Bike_COm"
+import Main_Bike from "./Main_Bike"
+import Bike_You from "./Bike_You"
 import { AiOutlineDoubleLeft, AiOutlineDoubleRight } from "react-icons/ai";
+import { AiOutlineRight } from "react-icons/ai";
+import BIke_Image from "./BIke_Image"
+import Bike_Special from "./Bike_Special"
 const Bike_inner = function ({ }) {
 
+  return (
+    <div style={{
+      width: '100%',
+      height: '310vh',
+      position: 'relative',
 
- return (
-  <div>
-   <Nav>
 
-   </Nav>
-   <div
-    className='first-main'>
-    <div className='first-main-sub1'>
-     <AiOutlineDoubleLeft
-      style={{
-       color: 'white',
-       width: '20px',
-       height: '20px',
-       position: 'absolute',
-       bottom: '30px',
-       right: '80px'
-      }}
-     ></AiOutlineDoubleLeft>
-     <AiOutlineDoubleRight
-      style={{
-       color: 'white',
-       width: '20px',
-       height: '20px',
-       position: 'absolute',
-       bottom: '30px',
-       right: '30px'
-      }}
+    }}>
 
-     ></AiOutlineDoubleRight>
-     <img
-      style={{
-       transform: 'scale(1.2)'
-      }}
-      src={Bike}></img>
-    </div>
-   </div>
-  </div>
- )
+      <div>
+
+      </div>
+      <Nav>
+      </Nav>
+      <Main_Bike>
+      </Main_Bike>
+
+      <div style={{
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'center'
+      }}>
+        <div style={{
+          width: '80%',
+          height: '100px',
+          flexDirection: 'column',
+
+        }}>
+
+          <div style={{
+            width: '100%',
+            height: '500px',
+            marginTop: '100px'
+          }}>
+
+
+            <BIke_Image></BIke_Image>
+
+            <div
+              style={{
+                marginTop: '100px'
+              }}
+
+            >
+              <p
+                className="sp-text"
+              > SPECIFICATION</p>
+            </div>
+            <Bike_Special></Bike_Special>
+
+            <Bike_You></Bike_You>
+
+
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+    </div >
+  )
 
 }
 

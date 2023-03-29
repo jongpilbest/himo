@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo&family=Noto+Sans+KR:wght@400;500;700&display=swap");
 
-.first-main{
- width: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+
+.first-main-11 {
+  width: 100%;
   height: 57vh;
   background-color: white;
   display: flex;
@@ -9,13 +12,140 @@
   justify-content: center;
   align-items: center;
 }
-.first-main-sub1 {
- width: 80%;
- height: 90%;
- position: relative;
- overflow: hidden;
- background-color: #1B1B1B;
- display: flex;
- justify-content: center;
- position: relative
+
+.first-main-sub11 {
+  width: 80%;
+  height: 90%;
+  position: relative;
+  overflow: hidden;
+  background-color: #1B1B1B;
+  display: flex;
+  justify-content: center;
+  position: relative
+}
+
+.first-p-1 {
+  font-family: "Heebo", sans-serif;
+
+  font-size: 18px;
+
+}
+
+.name-1 {
+  font-family: "Heebo", sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+margin: 0;
+
+}
+
+.second-image-1 {
+
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  position: relative;
+}
+
+.second-text-1 {
+
+  width: 50%;
+  height: 100%;
+  background-color: #1b1b1b;
+  justify-content: center;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.macc-p-1{
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.ma--p-1 {
+  font-family: "Noto Sans KR", sans-serif;
+
+  margin-bottom: auto;
+  font-size: 13px;
+  text-align: start;
+  font-weight: 100;
+  color: white;
+  margin-top: auto;
+}
+.sp-text{
+    font-family: "Heebo", sans-serif;
+      font-weight: bold;
+      font-size:30px;
+      margin: 0;
+}
+
+.border{
+ 
+        width: 100%;
+          height: 18%;
+     
+          border-width: 1px;
+          border-style: solid;
+        border-bottom-color: black;
+          border-top-color: transparent;
+          border-right-color: transparent;
+          border-left-color: transparent;
+          display: flex;
+          justify-content: space-between;
+          padding: 10px;
+
+
+}
+.border-text{
+  font-family: "Heebo", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+  
+   
+
+
+}
+
+.p_more{
+  font-family: "Noto Sans KR", sans-serif;
+  
+    margin-bottom: auto;
+    font-size: 13px;
+    font-weight: bold;
+    color:white;
+    margin-top: auto;
+
+}
+
+.gen{
+
+    font-size: 25px;
+  font-family: "Heebo", sans-serif;
+  font-weight: bold;
+
+}
+
+.macc{
+font-family: "Noto Sans KR", sans-serif;
+font-size: 50px;
+font-weight: bold;
+margin:0px;
+padding: 10px;
+
+}
+
+.te_text{
+
+        margin-top: auto;
+          margin-bottom: auto;
+              font-size: 17px;
+            
+                font-family: "Heebo", sans-serif;
+
+   
 }
