@@ -5,7 +5,7 @@ import React, { useState, useEffect, useContext, useRef } from "react"
 
 import './Bike.css'
 
-const Bike_COm = function ({ data, nm }) {
+const Bike_COm = function ({ data }) {
 
 
 

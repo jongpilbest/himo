@@ -4,9 +4,7 @@
 import React, { useState, useEffect, useContext, useRef } from "react"
 import './Bike.css'
 import Nav from "../Component/nav"
-import { AiOutlineInstagram } from "react-icons/ai";
-import { RiKakaoTalkFill } from "react-icons/ri";
-import { AiFillTwitterCircle, AiTwotoneCheckCircle } from "react-icons/ai";
+
 import Bike_COm from "./Bike_COm"
 import Main_Bike from "./Main_Bike"
 import Bike_You from "./Bike_You"
@@ -19,7 +17,7 @@ const Bike_inner = function ({ }) {
   return (
     <div style={{
       width: '100%',
-      height: '310vh',
+      height: '300vh',
       position: 'relative',
 
 
@@ -77,17 +75,7 @@ const Bike_inner = function ({ }) {
 
 
         </div>
-
-
-
-
-
       </div>
-
-
-
-
-
 
     </div >
   )

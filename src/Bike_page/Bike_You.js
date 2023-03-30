@@ -2,12 +2,34 @@
 
 
 import React, { useState, useEffect, useContext, useRef } from "react"
-
+import Bike_You_Com from "./Bike_You_Com"
 
 const Bike_You = function ({ data, nm }) {
 
+ const [clik_change, setclick_Change] = useState(0)
 
 
+
+ const Bike_youtuve = [
+  {
+
+   name: 'Craving Tech',
+   src: 'https://www.youtube.com/embed/RAcm8C3qM9I',
+   youtuber: 'https://yt3.ggpht.com/ytc/AL5GRJUFfbA2P5k2prcdwCCvh3_emaNIaCq_C3tXZURJ=s88-c-k-c0x00ffffff-no-rj'
+  },
+  {
+   name: 'Panmi',
+   src: 'https://www.youtube.com/embed/drGxFwnvF6M',
+   youtuber: 'https://yt3.ggpht.com/HfCfVeliqpmg4AdNIRX1Ou6CU9YfuG_tpHs1C54LJ2R967RAkgMYZjR9stBIsTXKEQBF6A8esA=s88-c-k-c0x00ffffff-no-rj'
+  },
+  {
+
+   name: 'HIMO',
+   src: 'https://www.youtube.com/embed/dqh-dNFvPlA',
+   youtuber: 'https://yt3.ggpht.com/ddaqHA7FTOieo_blD6CzPTLCEMf9b9548vRIRefL5wLDhME7cun9GVZX7996L38VnFbZLNLk=s88-c-k-c0x00ffffff-no-rj'
+  }
+
+ ]
 
 
 
@@ -65,78 +87,76 @@ const Bike_You = function ({ data, nm }) {
 
      }}>
 
-      <div style={{
-       width: '70%',
-       height: '25%',
-       backgroundColor: 'white',
-       borderStyle: 'solid',
-       borderWidth: '1px'
-      }}>
 
-      </div>
-      <div style={{
-       width: '70%',
-       height: '25%',
-       backgroundColor: '#1B1B1B'
-      }}>
-
-      </div>
-      <div style={{
-       width: '70%',
-       height: '25%',
-       backgroundColor: 'white',
-       borderStyle: 'solid',
-       borderWidth: '1px',
-       display: 'flex',
+      {
 
 
-      }}>
-       <div style={{
-        width: '40%',
-        height: '100%',
-
-        //borderRadius: '50%',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
-       }}>
-        <div style={{
-         width: '60px',
-         height: '60px',
-         backgroundColor: '#AEAEAE',
-         borderRadius: '50%',
-        }}>
-
-        </div>
-
-       </div>
-       <div
-        style={{
-         width: '60%'
-         , height: '100%',
-         display: 'flex',
-         alignContent: 'center',
-
-        }}
-
-       >
+       Bike_youtuve.map((el, index) => {
 
 
-
-        <p
-         className="te_text"
+        return <Bike_You_Com
+         key={index}
+         data={el}
+         color={clik_change}
+         num={index}
+         cli={(el) => {
+          setclick_Change(el)
+         }}
 
         >
-         TechTable
-        </p>
 
-       </div>
+        </Bike_You_Com>
+       })
 
-      </div>
+
+      }
 
      </div>
 
     </div>
+
+
+
+    <div style={{
+     width: '60%',
+     height: '100%',
+     backgroundColor: 'gray'
+    }}>
+
+     {
+
+      <iframe
+
+       style={{
+        border: 'none'
+       }}
+
+       width="100%" height="100%" src={Bike_youtuve[clik_change].src} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+     }
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
    </div>
   </>
