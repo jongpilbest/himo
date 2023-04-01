@@ -12,6 +12,7 @@ import { AiOutlineDoubleLeft, AiOutlineDoubleRight } from "react-icons/ai";
 import { AiOutlineRight } from "react-icons/ai";
 import BIke_Image from "./BIke_Image"
 import Bike_Special from "./Bike_Special"
+import Switch_image from "../Component/Switch_image"
 const Bike_inner = function ({ }) {
 
   return (
@@ -28,8 +29,10 @@ const Bike_inner = function ({ }) {
       </div>
       <Nav>
       </Nav>
-      <Main_Bike>
-      </Main_Bike>
+      <Switch_image>
+
+      </Switch_image>
+
 
       <div style={{
         width: '100%',

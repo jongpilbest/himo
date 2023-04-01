@@ -21,13 +21,33 @@ const Bike_COm = function ({ data }) {
     <div
      style={{
       display: 'flex',
+      width: '100%',
       alignItems: 'center'
      }}
     >
-     <p
+     <div style={{
+      width: '30%'
+     }}>
 
-      className="border-text"
-     >CE Certification</p>
+
+      <p
+
+       className="border-text"
+      >{data.name}</p>
+     </div>
+     <div
+      style={{
+       width: '50%',
+       height: '100%',
+
+      }}
+     >
+      <p
+
+       className="border-text-1"
+      >{data.spec}</p>
+
+     </div>
 
     </div>
 

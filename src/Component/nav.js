@@ -3,327 +3,247 @@
 
 import React, { useState, useEffect, useContext, useRef } from "react"
 import logo from './logo.svg';
-
+import Nav_Com from "./Nav_Com";
 const Nav = function ({ }) {
 
+  const Ref = useRef(null);
 
 
+  const [click, setclick] = useState(false);
+  const [cliick, setcliick] = useState(false);
 
-
-
-
-
-
-
- return (
-  <div>
-   <nav style={{
-    width: '100%',
-    height: '80px',
-    // backgroundColor: 'blue',
-    display: 'flex',
-    justifyContent: 'center',
-    flexDirection: 'row',
-
-   }} >
-    <div
-     className='nav_1'
-    >
-     <div
-      style={{
-       width: '150px',
-       height: '50%',
-       display: 'flex',
-
-       alignItems: 'center',
-
-       marginTop: '30px'
-      }}
-     >
-
-
-
-
-      <img
-       style={{
-        width: '110px',
-        height: '25px',
-
-
-       }}
-
-       src={require('../assets/logo.png')}></img>
-     </div>
-
-     <div style={{
-      width: '150px',
-      height: '40px',
-      display: 'flex',
-
-      alignItems: 'center',
-
-      marginTop: '30px',
-      display: 'flex',
-      flexDirection: 'column'
-     }}>
-      <div style={{
-       width: '100%',
-       height: '40px',
-
-       position: 'relative',
-       display: 'flex',
-       justifyContent: 'center',
-       alignItems: 'center'
-      }}>
-       <p
-        className="main-text"
-
-       > E-bike</p>
-
-      </div>
-      <div style={{
-       width: '150px',
-
-       backgroundColor: 'white',
-       position: 'absolute',
-       zIndex: 2,
-       top: '80px'
-
-
-      }}>
-       <div style={{
+  return (
+    <div>
+      <nav style={{
         width: '100%',
-        height: '40px',
-        borderStyle: 'solid',
-        borderWidth: '1px',
-        borderTopColor: 'transparent',
-        borderRightColor: 'transparent',
-        borderLeftColor: 'transparent',
+        height: '80px',
+        // backgroundColor: 'blue',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center',
+        flexDirection: 'row',
 
-       }}>
+      }} >
+        <div
+          className='nav_1'
+        >
+          <div
+            style={{
+              width: '150px',
+              height: '50%',
+              display: 'flex',
 
-        <p
-         className="main-text-text"
+              alignSelf: 'center',
+              justifyContent: 'center',
+              alignItems: 'center'
 
-        >Himo Z16</p>
 
-       </div>
-       <div style={{
-        width: '100%',
-        height: '40px',
-        borderStyle: 'solid',
-        borderWidth: '1px',
-        borderTopColor: 'transparent',
-        borderRightColor: 'transparent',
-        borderLeftColor: 'transparent',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
 
-       }}>
+            }}
+          >
 
-        <p
-         className="main-text-text"
 
-        >Himo Z16 Max</p>
 
-       </div>
-       <div style={{
-        width: '100%',
-        height: '40px',
-        borderStyle: 'solid',
-        borderWidth: '1px',
-        borderTopColor: 'transparent',
-        borderRightColor: 'transparent',
-        borderLeftColor: 'transparent',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
 
-       }}>
+            <img
+              style={{
+                width: '110px',
+                height: '25px',
 
-        <p
-         className="main-text-text"
 
-        >Himo Z20</p>
+              }}
 
-       </div>
-       <div style={{
-        width: '100%',
-        height: '40px',
-        borderStyle: 'solid',
-        borderWidth: '1px',
-        borderTopColor: 'transparent',
-        borderRightColor: 'transparent',
-        borderLeftColor: 'transparent',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
+              src={require('../assets/logo.png')}></img>
+          </div>
 
-       }}>
+          <div style={{
+            width: '150px',
+            height: '40px',
+            display: 'flex',
 
-        <p
-         className="main-text-text"
+            alignItems: 'center',
+            alignSelf: 'center',
+            justifyContent: 'center',
 
-        >Himo Z20 Max</p>
+            display: 'flex',
+            flexDirection: 'column'
+          }}>
+            <div
+              onMouseOver={() => {
+                setclick(true);
 
-       </div>
+              }}
+              onMouseOut={() => {
+                setclick(false);
+              }}
 
 
-      </div>
+              style={{
+                width: '100%',
+                height: '40px',
 
+                position: 'relative',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center'
+              }}>
+              <p
+                className="main-text"
 
+              > E-bike</p>
 
-     </div>
+            </div>
+            <div style={{
+              width: '150px',
 
+              backgroundColor: 'white',
+              position: 'absolute',
+              zIndex: 2,
+              top: '60px'
+            }}>
 
+              {
+                click &&
+                ["Himo Z16", "Himo Z16 Max", "Himo Z20", "Himo Z20 Max"]
+                  .map((el, index) => {
+                    return <Nav_Com
+                      data={el}
+                      nm={(el) => setclick(el)}
+                      key={index}
+                    ></Nav_Com>
+                  })
 
 
-     <div style={{
-      width: '150px',
-      height: '40px',
-      display: 'flex',
 
-      alignItems: 'center',
+              }
 
-      marginTop: '30px',
-      display: 'flex',
-      flexDirection: 'column'
-     }}>
-      <div style={{
-       width: '100%',
-       height: '40px',
 
-       position: 'relative',
-       display: 'flex',
-       justifyContent: 'center',
-       alignItems: 'center'
-      }}>
-       <p
-        className="main-text"
+            </div>
 
-       > Accessori</p>
 
-      </div>
-      <div style={{
-       width: '150px',
 
-       backgroundColor: 'white',
-       position: 'absolute',
-       zIndex: 2,
-       top: '80px'
+          </div>
 
 
-      }}>
-       <div
-        className="nav_ho"
 
-       >
 
-        <p
-         className="main-text-text"
+          <div
 
-        >Helments</p>
 
-       </div>
-       <div style={{
-        width: '100%',
-        height: '40px',
-        borderStyle: 'solid',
-        borderWidth: '1px',
-        borderTopColor: 'transparent',
-        borderRightColor: 'transparent',
-        borderLeftColor: 'transparent',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
+            style={{
+              width: '150px',
+              height: '40px',
+              display: 'flex',
 
-       }}>
+              alignItems: 'center',
 
-        <p
-         className="main-text-text"
+              alignSelf: 'center',
+              justifyContent: 'center',
+              display: 'flex',
+              flexDirection: 'column'
+            }}>
+            <div
 
-        >Alarms & Locks</p>
+              onMouseOver={() => {
+                setcliick(true);
 
-       </div>
-       <div style={{
-        width: '100%',
-        height: '40px',
-        borderStyle: 'solid',
-        borderWidth: '1px',
-        borderTopColor: 'transparent',
-        borderRightColor: 'transparent',
-        borderLeftColor: 'transparent',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
+              }}
+              onMouseOut={() => {
+                setcliick(false);
+              }}
 
-       }}>
 
-        <p
-         className="main-text-text"
+              style={{
+                width: '100%',
+                height: '40px',
 
-        >Fenders</p>
+                position: 'relative',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center'
+              }}>
+              <p
+                className="main-text"
 
-       </div>
+              > Accessori</p>
 
+            </div>
+            <div style={{
+              width: '150px',
 
+              backgroundColor: 'white',
+              position: 'absolute',
+              zIndex: 2,
+              top: '60px'
+            }}>
 
-      </div>
 
+              {cliick &&
+                ["Helments", "Alarms & Locks", "Fenders"]
+                  .map((el, index) => {
+                    return <Nav_Com
+                      nm={(el) => setcliick(el)}
+                      data={el}
+                      key={index}
+                    ></Nav_Com>
+                  })
 
 
-     </div>
 
-     <div style={{
-      width: '150px',
-      height: '40px',
-      display: 'flex',
+              }
 
-      alignItems: 'center',
 
-      marginTop: '30px',
-      display: 'flex',
-      flexDirection: 'column'
-     }}>
-      <div style={{
-       width: '100%',
-       height: '40px',
+            </div>
 
-       position: 'relative',
-       display: 'flex',
-       justifyContent: 'center',
-       alignItems: 'center'
-      }}>
-       <p
-        className="main-text"
 
-       > Support</p>
 
-      </div>
+          </div>
 
+          <div style={{
+            width: '150px',
+            height: '40px',
+            display: 'flex',
 
+            alignItems: 'center',
+            alignSelf: 'center',
 
-     </div>
+            display: 'flex',
+            flexDirection: 'column'
+          }}>
+            <div style={{
+              width: '100%',
+              height: '40px',
 
+              position: 'relative',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center'
+            }}>
+              <p
+                className="main-text"
 
+              > Support</p>
 
-    </div>
+            </div>
 
 
 
+          </div>
 
 
 
+        </div>
 
 
-   </nav >
 
-  </div >
- )
+
+
+
+
+
+      </nav >
+
+    </div >
+  )
 
 }
 
