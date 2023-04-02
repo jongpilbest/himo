@@ -3,6 +3,10 @@
 
 import React, { useState, useEffect, useContext, useRef } from "react"
 import { AiOutlineDoubleLeft, AiOutlineDoubleRight } from "react-icons/ai";
+
+
+
+
 import { AiOutlineRight } from "react-icons/ai";
 import Bike from '../assets/bike.svg'
 import himo from '../assets/bike_image 1.svg'

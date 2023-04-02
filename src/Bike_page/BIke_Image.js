@@ -5,99 +5,141 @@ import React, { useState, useEffect, useContext, useRef } from "react"
 import { AiOutlineDoubleLeft, AiOutlineDoubleRight } from "react-icons/ai";
 import { AiOutlineRight } from "react-icons/ai";
 import machine_1 from '../assets/machine_1.svg'
+import Image__Com from "../Component/Image__Com";
 const BIke_Image = function ({ data, nm }) {
 
 
 
 
+  const [num, setnum] = useState(0);
 
+  const Ref = useRef(null);
 
- return (
+  const RRef = useRef(null);
 
-
-  <>
-   <div
-    style={{
-     width: '100%',
-     height: '420px',
-     display: 'flex'
-    }}
-   >
-    <div style={{
-     width: '50%',
-     height: '100%',
-     borderWidth: '1px',
-     borderStyle: 'solid',
-    }}>
-
-     <img
-
-      style={{
-       objectFit: 'contain',
-       width: '95%',
-       height: '100%',
-       display: 'flex',
-       alignSelf: 'center'
-
-      }}
-      src={machine_1}></img>
-
-    </div>
-    <div
-
-     className='second-text-1'>
-     <div className='second-text-main-1'>
-      <p className='macc-p-1'>
-       250W 강한 모터
-      </p>
-
-     </div>
-
-     <div style={{
-      width: '100%',
-      height: '40%',
+  const gogo = function () {
+    var hey = window.innerWidth * 0.8 * -1
+    if (num > 3) {
+      setnum(0);
+    }
+    if (num < 0) {
+      setnum(3);
+    }
+    return {
+      width: window.innerWidth * 0.8 * 4,
+      height: '100%',
+      backgroundColor: 'pink',
       display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
+      transform: `translateX(${hey * num}px)`,
+      transition: `transform 0.5s ease-in`,
+      flexDirection: 'row'
+    }
+  }
 
 
-     }}>
-      <div style={{
-       width: '75%',
-       height: '100%',
 
-       display: 'flex',
-       alignItems: 'center',
-       flexDirection: 'column',
-
-      }}> <p
-
-       className='ma--p-1'
-      >
-        250w 리어 허브 모터는 가파른 언덕을 질주하는 것을 두려워하지 않게 해줍니다. 당신은 이 모터를 통해 사용자들이 손쉽게 언덕을 오를수 있게 도와줍니다.어시스트 기능 및 시스템에는 3가지가 있습니다. 0-무어시스트 모드, 1-페달 어시스트 모드, 2-페달 + 스로틀 어시스트 모드, 3-스로틀 어시스트 모드, 3-스로틀 어시스트 모드의 70-90%, 모트
-
-       </p>
-
-       <AiOutlineRight
-        className='arrow'
-        style={{
-         color: 'white'
-        }}
-       ></AiOutlineRight>
+  return (
 
 
+    <>
+      <div className='first-main-11'>
+        <div
+          ref={RRef}
+          style={{
+
+            width: '100%',
+
+          }}
+          className='first-main-sub1'>
+          <AiOutlineDoubleLeft
+            onClick={() => {
+
+              setnum((el) => el - 1)
+            }}
+            style={{
+              color: 'black',
+              width: '20px',
+              height: '20px',
+              position: 'absolute',
+              bottom: '30px',
+              right: '80px',
+              zIndex: 3
+            }}
+          ></AiOutlineDoubleLeft>
+          <AiOutlineDoubleRight
+            onClick={() => {
+
+              setnum((el) => el + 1)
+            }}
+            style={{
+              color: 'black',
+              width: '20px',
+              height: '20px',
+              position: 'absolute',
+              bottom: '30px',
+              right: '30px',
+              zIndex: 3
+            }}
+
+          ></AiOutlineDoubleRight>
+          <div style={gogo()}
+          >
+
+            <div
+              ref={Ref}
+              style={{
+                width: window.innerWidth * 0.8,
+                height: '100%',
+                backgroundColor: 'aquamarine',
+
+                position: 'relative',
+
+                justifyContent: 'center',
+
+              }}>
+
+
+
+
+
+
+            </div>
+            <div
+
+              style={{
+                width: window.innerWidth * 0.8,
+                height: '100%',
+                backgroundColor: 'beige',
+
+
+              }}>
+
+
+            </div>
+
+            {
+
+
+
+            }
+
+
+
+
+
+          </div>
+
+
+        </div>
 
       </div>
 
 
-     </div>
-
-    </div>
 
 
-   </div>
-  </>
- )
+
+    </>
+  )
 
 }
 
