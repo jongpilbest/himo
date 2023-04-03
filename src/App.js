@@ -12,7 +12,7 @@ function App() {
   return (
     <>
 
-      <Bike_inner></Bike_inner>
+      <Main></Main>
       <Footer></Footer>
 
     </>

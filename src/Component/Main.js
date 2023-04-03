@@ -12,7 +12,7 @@ import { AiOutlineDown } from "react-icons/ai";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { RiKakaoTalkFill } from "react-icons/ri";
 import Bike from '../assets/bike.svg'
-
+import zz from '../assets/z-16.svg'
 import { useEffect, useState, useRef } from 'react';
 import Dot from './Dot';
 
@@ -107,9 +107,11 @@ const Main = function ({ }) {
                 width: window.innerWidth * 0.8,
                 height: '100%',
                 //backgroundColor: 'skyblue',
-                position: 'relative'
+                position: 'relative',
+
               }}>
               <img
+
                 className='img-1'
                 src={Bike}></img>
               <div className='first-main-sub2'>
@@ -166,12 +168,74 @@ const Main = function ({ }) {
             </div>
             <div
 
+
               style={{
                 width: window.innerWidth * 0.8,
                 height: '100%',
-                backgroundColor: 'blue'
+                //backgroundColor: 'skyblue',
+                position: 'relative'
               }}>
+              <img
+                style={{
+                  transform: 'scale(0.8)'
+                }}
+                className='img-1'
+                src={zz}></img>
+              <div className='first-main-sub2'>
+                <div
+                >
+                  <p
+                    className='black-p'
+                  >
+                    HIMO Z16
+                  </p>
+                  <div
+                    style={{
+                      width: '40%'
+                    }}
 
+                    className='first-main-left'>
+                    <p
+                      className='black-p-p'
+                    >
+                      최대 주행 거리가 80km에 이르는 가장 작고 환경 친화적인 차량
+
+                    </p>
+                  </div>
+
+                </div>
+                <div>
+                  <p>
+
+                  </p>
+                </div>
+                <div style={{
+                  width: '100%',
+                  height: '10%',
+                  //backgroundColor: 'white',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  marginTop: '20px'
+                }}>
+                  <div style={{
+                    width: '200px',
+                    height: '100%',
+                    marginLeft: '30px',
+                    backgroundColor: 'white',
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                    alignContent: 'center',
+
+                  }}>
+                    <p
+                      className='black-q'
+                    > 자세히 알아보기</p>
+                  </div>
+
+                </div>
+              </div>
             </div>
             <div
 

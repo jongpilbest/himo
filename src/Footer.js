@@ -2,7 +2,7 @@
 
 
 import React, { useState, useEffect, useContext, useRef } from "react"
-import { AiOutlineInstagram } from "react-icons/ai";
+import { AiOutlineInstagram, AiFillYoutube } from "react-icons/ai";
 import { RiKakaoTalkFill } from "react-icons/ri";
 import { AiFillTwitterCircle, AiTwotoneCheckCircle } from "react-icons/ai";
 
@@ -20,7 +20,8 @@ const Footer = function ({ data, nm }) {
       backgroundColor: '#1b1b1b',
       display: 'flex',
       justifyContent: 'center',
-      overflow: 'hidden'
+      overflow: 'hidden',
+      marginTop: '150px'
 
 
     }}>
@@ -76,6 +77,9 @@ const Footer = function ({ data, nm }) {
               }}
             >
               <AiFillTwitterCircle
+                onClick={() => {
+                  window.open('https://twitter.com/HIMOEBIKE', '_blank')
+                }}
                 style={{
                   width: '30px',
                   height: '30px',
@@ -86,6 +90,9 @@ const Footer = function ({ data, nm }) {
 
               </AiFillTwitterCircle>
               <AiOutlineInstagram
+                onClick={() => {
+                  window.open('https://www.instagram.com/himo_bike/', '_blank')
+                }}
 
                 style={{
                   width: '30px',
@@ -95,7 +102,11 @@ const Footer = function ({ data, nm }) {
                 }}
               ></AiOutlineInstagram>
 
-              <RiKakaoTalkFill
+              <AiFillYoutube
+
+                onClick={() => {
+                  window.open('https://www.youtube.com/channel/UC2xLeDa-k9k7An2z3fKfIqA/featured', '_blank')
+                }}
 
 
 
@@ -103,7 +114,7 @@ const Footer = function ({ data, nm }) {
                   width: '30px',
                   height: '30px',
                   color: 'white'
-                }}></RiKakaoTalkFill>
+                }}></AiFillYoutube>
 
 
             </div>

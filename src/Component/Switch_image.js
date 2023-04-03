@@ -206,7 +206,7 @@ const Switch_image = function ({ data, nm }) {
             <div
 
               onClick={() => {
-
+                setnum(0)
                 setimage_1({
                   image: Black_Bike,
                   ima: 2
@@ -224,7 +224,7 @@ const Switch_image = function ({ data, nm }) {
             </div>
             <div
               onClick={() => {
-
+                setnum(0)
                 setimage_1({
                   image: Bike,
                   ima: 1
