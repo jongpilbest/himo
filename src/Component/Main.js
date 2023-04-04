@@ -13,6 +13,7 @@ import { AiOutlineInstagram } from "react-icons/ai";
 import { RiKakaoTalkFill } from "react-icons/ri";
 import Bike from '../assets/bike.svg'
 import zz from '../assets/z-16.svg'
+import yellow_bike from '../assets/yellow_bike.svg'
 import { useEffect, useState, useRef } from 'react';
 import Dot from './Dot';
 
@@ -66,11 +67,19 @@ const Main = function ({ }) {
     }, [delay]); // delay가 바뀔 때마다 새로 실행된다.
   }
 
-  /*
-    useInterval(() => {
+
+  useInterval(() => {
+
+    if (num >= 2) {
+      setnum(0);
+    }
+    else if (num < 2) {
       setnum(num + 1)
-    }, [2000])
-  */
+    }
+
+    //setnum(num + 1)
+  }, [5000])
+
 
   useEffect(() => {
     gogo();
@@ -79,7 +88,7 @@ const Main = function ({ }) {
 
   const gogo = function () {
     var hey = window.innerWidth * 0.8 * -1
-    console.log(hey, '헤이')
+
     return {
       width: window.innerWidth * 0.8 * 3,
       height: '100%',
@@ -198,7 +207,8 @@ const Main = function ({ }) {
                     <p
                       className='black-p-p'
                     >
-                      최대 주행 거리가 80km에 이르는 가장 작고 환경 친화적인 차량
+                      작지만 실속이고 최대거리가 20km 까지 달릴수 있는 환경 친화적인 자전거.
+
 
                     </p>
                   </div>
@@ -239,12 +249,74 @@ const Main = function ({ }) {
             </div>
             <div
 
+
               style={{
                 width: window.innerWidth * 0.8,
                 height: '100%',
-                backgroundColor: 'green'
+                //backgroundColor: 'skyblue',
+                position: 'relative'
               }}>
+              <img
+                style={{
+                  transform: 'scale(0.8)'
+                }}
+                className='img-1'
+                src={yellow_bike}></img>
+              <div className='first-main-sub2'>
+                <div
+                >
+                  <p
+                    className='black-p'
+                  >
+                    HIMO ZB20 MAX
+                  </p>
+                  <div
+                    style={{
+                      width: '40%'
+                    }}
 
+                    className='first-main-left'>
+                    <p
+                      className='black-p-p'
+                    >
+                      자갈이나 진흙같은 울퉁불퉁한 도로도 어려움없이 달릴수 있는 자전거.
+
+                    </p>
+                  </div>
+
+                </div>
+                <div>
+                  <p>
+
+                  </p>
+                </div>
+                <div style={{
+                  width: '100%',
+                  height: '10%',
+                  //backgroundColor: 'white',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  marginTop: '20px'
+                }}>
+                  <div style={{
+                    width: '200px',
+                    height: '100%',
+                    marginLeft: '30px',
+                    backgroundColor: 'white',
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                    alignContent: 'center',
+
+                  }}>
+                    <p
+                      className='black-q'
+                    > 자세히 알아보기</p>
+                  </div>
+
+                </div>
+              </div>
             </div>
 
 
@@ -447,23 +519,30 @@ const Main = function ({ }) {
         }}>
 
 
-          <div className='second-main'>
-            <div className='second-image-1'>
+          <div
 
-              <img
+            style={{
+              backgroundColor: '#1B1B1B'
+            }}
+            className='second-main'>
 
-                style={{
-                  objectFit: 'contain',
-                  width: '100%',
-                  height: '100%',
-                  display: 'flex',
-                  alignSelf: 'center'
 
-                }}
-                src={Bike}></img>
+            <img
 
-            </div>
+              style={{
+                objectFit: 'contain',
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                alignSelf: 'center',
+                transform: 'scale(1.2)'
+
+              }}
+              src={Bike}></img>
+
+
             <div
+
               className='second-text-1'>
               <p
                 className='ss-text'
