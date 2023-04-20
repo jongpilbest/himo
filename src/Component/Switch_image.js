@@ -10,13 +10,15 @@ import black_3 from '../assets/black_3.svg';
 
 //import black_4 from '../assets/black_4.svg';
 import black_5 from '../assets/black_5.svg';
-
-
+import white_bike_1 from '../assets/white_bike_1.svg'
+import white_bike_2 from '../assets/white_bike_2.svg'
+import white_bike_3 from '../assets/white_bike_3.svg'
 import Bike from '../assets/bike.svg'
 import Black_Bike from '../assets/black_bike.svg'
 import himo from '../assets/bike_image 1.svg'
 const Switch_image = function ({ data, nm }) {
   const black_image = [black_2, black_3, black_5];
+  const white_image = [white_bike_1, white_bike_2, white_bike_3]
   const [num, setnum] = useState(0);
   const [image_1, setimage_1] = useState(
     {
@@ -145,6 +147,21 @@ const Switch_image = function ({ data, nm }) {
 
                 </Image__Com>
               })
+
+
+            }
+            {
+              image_1.ima == 1 &&
+              white_image.map((el, index) => {
+                return <Image__Com data={el
+                }
+                  key={index}>
+
+                </Image__Com>
+              })
+
+
+
 
 
             }

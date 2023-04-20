@@ -5,6 +5,8 @@ import logo from './logo.svg';
 import Nav from './nav';
 import Sub_Com from './Sub_Com';
 import './Main.css'
+import { Link } from 'react-router-dom';
+import Footer from '../Footer';
 import { AiOutlineMore } from "react-icons/ai";
 import { AiOutlineRight } from "react-icons/ai";
 import { AiFillTwitterCircle, AiTwotoneCheckCircle } from "react-icons/ai";
@@ -104,7 +106,7 @@ const Main = function ({ }) {
 
   return (
     <div className="App">
-      <Nav></Nav>
+
       <div className='first-main'>
         <div className='first-main-sub1'>
           <div style={gogo()}
@@ -388,9 +390,25 @@ const Main = function ({ }) {
             alignItems: 'center'
           }}
         >
-          <p className='bike--p'>
-            더 많은 자전거
-          </p>
+
+
+
+          <Link
+
+            style={{
+              textDecoration: 'none',
+              color: 'black'
+            }}
+            to='/product' >
+            <p className='bike--p'>
+              더 많은 자전거
+            </p>
+          </Link>
+
+
+
+
+
           <AiOutlineRight
             style={{
               width: '25px',
@@ -423,78 +441,118 @@ const Main = function ({ }) {
 
 
           <div className='second-main'>
-            <div className='second-image'>
 
-              <img
 
-                style={{
-                  objectFit: 'contain',
-                  width: '90%',
-                  height: '90%',
-                  display: 'flex',
-                  alignSelf: 'center'
+            <div style={{
+              width: window.innerWidth * 0.8 * 4,
+              height: '100%',
+              backgroundColor: 'ghostwhite',
+              overflow: 'auto'
 
-                }}
-                src={machine_1}></img>
-              <p
-                className='macoo'
-              >01</p>
-            </div>
-            <div
-              className='second-text'>
-              <div className='second-text-main'>
-                <p className='macc-p'>
-                  접을 수 있는 디자인
-                </p>
 
-              </div>
+            }}>
+
+
+
+
 
               <div style={{
-                width: '100%',
-                height: '40%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-
+                width: window.innerWidth * 0.8 * 3,
+                height: '100%',
+                backgroundColor: 'whitesmoke',
+                display: 'flex'
 
               }}>
+
                 <div style={{
-                  width: '75%',
+
+                  width: window.innerWidth * 0.8 * 0.5,
                   height: '100%',
-                  backgroundColor: 'white',
-                  display: 'flex',
-                  alignItems: 'center',
-                  flexDirection: 'column',
-
-                }}> <p
-
-                  className='ma--p'
-                >
-                    HIMO Z16은 접이식이 가능한 핸들 바 , 차체 , 페달을 가지고 있어 작은 공간에도 휴대가 가능합니다.
-                    주차 공간을 줄여 번잡한 공간을 줄일수 있으며 간단하게 주차가 가능합니다.
+                  backgroundColor: '#1b1b1b',
+                  position: 'relative'
 
 
-                  </p>
 
-                  <AiOutlineRight
-                    className='arrow'
+
+                }}>
+
+                  <img
+
                     style={{
-                      color: 'black'
+                      objectFit: 'contain',
+                      width: '90%',
+                      height: '90%',
+                      display: 'flex',
+                      alignSelf: 'center'
+
                     }}
-                  ></AiOutlineRight>
+                    src={machine_1}></img>
+                  <p
+                    className='macoo'
+                  >01</p>
+                </div>
+                <div
+                  style={{
+                    width: window.innerWidth * 0.8 * 0.5,
+                    height: '100%',
+                    backgroundColor: 'white'
+                  }}
 
 
+                >
+                  <div className='second-text-main'>
+                    <p className='macc-p'>
+                      접을 수 있는 디자인
+                    </p>
+
+                  </div>
+
+                  <div style={{
+                    width: '100%',
+                    height: '40%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+
+
+                  }}>
+                    <div style={{
+                      width: '75%',
+                      height: '100%',
+                      backgroundColor: 'white',
+                      display: 'flex',
+                      alignItems: 'center',
+                      flexDirection: 'column',
+
+                    }}> <p
+
+                      className='ma--p'
+                    >
+                        HIMO Z16은 접이식이 가능한 핸들 바 , 차체 , 페달을 가지고 있어 작은 공간에도 휴대가 가능합니다.
+                        주차 공간을 줄여 번잡한 공간을 줄일수 있으며 간단하게 주차가 가능합니다.
+
+
+                      </p>
+
+                      <AiOutlineRight
+                        className='arrow'
+                        style={{
+                          color: 'black'
+                        }}
+                      ></AiOutlineRight>
+
+
+
+                    </div>
+
+
+                  </div>
 
                 </div>
-
-
               </div>
 
             </div>
-
-
           </div>
-
         </div>
 
       </div>
@@ -573,7 +631,7 @@ const Main = function ({ }) {
         </div>
       </div >
 
-
+      <Footer></Footer>
     </div >
   )
 }

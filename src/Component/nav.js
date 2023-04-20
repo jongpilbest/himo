@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect, useContext, useRef } from "react"
 import logo from './logo.svg';
+import { Outlet } from "react-router-dom";
 import Nav_Com from "./Nav_Com";
 const Nav = function ({ }) {
 

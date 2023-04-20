@@ -4,6 +4,7 @@
 import React, { useState, useEffect, useContext, useRef } from "react"
 import './Bike.css'
 import Nav from "../Component/nav"
+import Footer from "../Footer"
 
 import Bike_COm from "./Bike_COm"
 import Main_Bike from "./Main_Bike"
@@ -22,13 +23,13 @@ const Bike_inner = function ({ }) {
       position: 'relative',
 
 
+
     }}>
 
       <div>
 
       </div>
-      <Nav>
-      </Nav>
+
       <Switch_image>
 
       </Switch_image>
@@ -37,6 +38,7 @@ const Bike_inner = function ({ }) {
       <div style={{
         width: '100%',
         display: 'flex',
+        height: '230vh',
         justifyContent: 'center'
       }}>
         <div style={{
@@ -79,6 +81,7 @@ const Bike_inner = function ({ }) {
 
         </div>
       </div>
+      <Footer></Footer>
 
     </div >
   )
