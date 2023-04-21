@@ -5,6 +5,7 @@ import React, { useState, useEffect, useContext, useRef } from "react"
 import logo from './logo.svg';
 import { Outlet } from "react-router-dom";
 import Nav_Com from "./Nav_Com";
+import { Link } from "react-router-dom";
 const Nav = function ({ }) {
 
   const Ref = useRef(null);
@@ -44,16 +45,20 @@ const Nav = function ({ }) {
 
 
 
+            <Link
 
-            <img
-              style={{
-                width: '110px',
-                height: '25px',
+              to='/'
+            >
+              <img
+                style={{
+                  width: '110px',
+                  height: '25px',
 
 
-              }}
+                }}
 
-              src={require('../assets/logo.png')}></img>
+                src={require('../assets/logo.png')}></img>
+            </Link>
           </div>
 
           <div style={{

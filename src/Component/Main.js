@@ -8,7 +8,19 @@ import './Main.css'
 import { Link } from 'react-router-dom';
 import Footer from '../Footer';
 import { AiOutlineMore } from "react-icons/ai";
+import Change_Main from './Change_Main';
 import { AiOutlineRight } from "react-icons/ai";
+
+
+
+
+import main_c from '../assets/main_c.svg'
+import main_cc from '../assets/main_cc.svg'
+
+
+
+
+
 import { AiFillTwitterCircle, AiTwotoneCheckCircle } from "react-icons/ai";
 import { AiOutlineDown } from "react-icons/ai";
 import { AiOutlineInstagram } from "react-icons/ai";
@@ -20,6 +32,32 @@ import { useEffect, useState, useRef } from 'react';
 import Dot from './Dot';
 
 const Main = function ({ }) {
+  const main_change = [
+    {
+
+      image: machine_1,
+      number: '01',
+      main_text: '접을 수 있는 디자인',
+      sub_text: 'HIMO Z16은 접이식이 가능한 핸들 바 , 차체 , 페달을 가지고 있어 작은 공간에도 휴대가 가능합니다. 주차 공간을 줄여 번잡한 공간을 줄일수 있으며 간단하게 주차가 가능합니다.'
+    }, {
+      image: main_c,
+      number: '02',
+      main_text: '강력한 체인',
+      sub_text: '바이크 안에 내장된 체인은 가파른 언덕도 손쉽게 오를수 있게 도와줍니다.사용자는 용도에 맞게 기아를 변경하여 편리하고 손쉬운 드라이빙을 가능하게 만듭니다.'
+
+    }, {
+      image: main_cc,
+      number: '03',
+      main_text: '부드러운 타이어',
+      sub_text: '타이어에 맞게 공기를 주입하여 타이어 압력으로 빠르고 손쉽게 라이딩을 할수 있습니다. 강한 타이어는 자전거를 지탱시켜 자전거의 손상을 막습니다.'
+
+    }
+
+
+  ]
+
+
+
   const image_first = [
     {
       color: 1,
@@ -49,6 +87,7 @@ const Main = function ({ }) {
 
   ]
   const [num, setnum] = useState(0);
+  const [nnum, setnnum] = useState(0);
 
   function useInterval(callback, delay) {
     const savedCallback = useRef(); // 최근에 들어온 callback을 저장할 ref를 하나 만든다.
@@ -97,6 +136,18 @@ const Main = function ({ }) {
       //backgroundColor: 'pink',
       display: 'flex',
       transform: `translateX(${hey * num}px)`,
+      transition: `transform 0.5s ease-in`
+    }
+  }
+
+  const main_gogo = function () {
+    var hey = window.innerWidth * 0.8 * -1
+    return {
+      width: window.innerWidth * 0.8 * 3,
+      height: '100%',
+      //backgroundColor: 'pink',
+      display: 'flex',
+      transform: `translateX(${hey * nnum}px)`,
       transition: `transform 0.5s ease-in`
     }
   }
@@ -441,120 +492,58 @@ const Main = function ({ }) {
 
 
           <div className='second-main'>
+            <AiOutlineRight
+              onClick={() => {
+                console.log(' 클릭')
 
+                if (nnum >= 2) {
+                  setnnum(0);
+                }
+                else if (nnum < 2) {
+                  setnnum(nnum + 1)
+                }
+
+
+              }}
+              className='arrow'
+              style={{
+                color: 'black',
+                position: 'absolute',
+                zIndex: 2
+                , bottom: '50px'
+              }}
+            ></AiOutlineRight>
 
             <div style={{
-              width: window.innerWidth * 0.8 * 4,
+              width: window.innerWidth * 0.8,
               height: '100%',
               backgroundColor: 'ghostwhite',
-              overflow: 'auto'
-
+              overflow: 'hidden'
 
             }}>
 
 
+              <div style={main_gogo()
+              }>
+                {
+
+                  main_change.map((el, index) => {
+
+                    return <Change_Main
+
+                      data={el}
+                      key={index}></Change_Main>
+
+                  })
+
+                }
 
 
 
-              <div style={{
-                width: window.innerWidth * 0.8 * 3,
-                height: '100%',
-                backgroundColor: 'whitesmoke',
-                display: 'flex'
-
-              }}>
-
-                <div style={{
-
-                  width: window.innerWidth * 0.8 * 0.5,
-                  height: '100%',
-                  backgroundColor: '#1b1b1b',
-                  position: 'relative'
-
-
-
-
-                }}>
-
-                  <img
-
-                    style={{
-                      objectFit: 'contain',
-                      width: '90%',
-                      height: '90%',
-                      display: 'flex',
-                      alignSelf: 'center'
-
-                    }}
-                    src={machine_1}></img>
-                  <p
-                    className='macoo'
-                  >01</p>
-                </div>
-                <div
-                  style={{
-                    width: window.innerWidth * 0.8 * 0.5,
-                    height: '100%',
-                    backgroundColor: 'white'
-                  }}
-
-
-                >
-                  <div className='second-text-main'>
-                    <p className='macc-p'>
-                      접을 수 있는 디자인
-                    </p>
-
-                  </div>
-
-                  <div style={{
-                    width: '100%',
-                    height: '40%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-
-
-                  }}>
-                    <div style={{
-                      width: '75%',
-                      height: '100%',
-                      backgroundColor: 'white',
-                      display: 'flex',
-                      alignItems: 'center',
-                      flexDirection: 'column',
-
-                    }}> <p
-
-                      className='ma--p'
-                    >
-                        HIMO Z16은 접이식이 가능한 핸들 바 , 차체 , 페달을 가지고 있어 작은 공간에도 휴대가 가능합니다.
-                        주차 공간을 줄여 번잡한 공간을 줄일수 있으며 간단하게 주차가 가능합니다.
-
-
-                      </p>
-
-                      <AiOutlineRight
-                        className='arrow'
-                        style={{
-                          color: 'black'
-                        }}
-                      ></AiOutlineRight>
-
-
-
-                    </div>
-
-
-                  </div>
-
-                </div>
               </div>
-
             </div>
           </div>
         </div>
-
       </div>
 
       <div style={{
@@ -623,9 +612,9 @@ const Main = function ({ }) {
 
 
 
-
-
             </div>
+
+
 
           </div>
         </div>
