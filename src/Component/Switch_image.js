@@ -11,12 +11,21 @@ import black_3 from '../assets/black_3.svg';
 //import black_4 from '../assets/black_4.svg';
 import black_5 from '../assets/black_5.svg';
 import white_bike_1 from '../assets/white_bike_1.svg'
+
+
+
+
+import main from '../assets/Z16/z16_main.svg'
+
+
+
 import white_bike_2 from '../assets/white_bike_2.svg'
 import white_bike_3 from '../assets/white_bike_3.svg'
 import Bike from '../assets/bike.svg'
 import Black_Bike from '../assets/black_bike.svg'
 import himo from '../assets/bike_image 1.svg'
-const Switch_image = function ({ data, nm }) {
+const Switch_image = function ({ da, nm }) {
+  console.log(da, '데이터')
   const black_image = [black_2, black_3, black_5];
   const white_image = [white_bike_1, white_bike_2, white_bike_3]
   const [num, setnum] = useState(0);
@@ -27,6 +36,7 @@ const Switch_image = function ({ data, nm }) {
     }
 
   );
+
   const Ref = useRef(null);
 
   const RRef = useRef(null);
@@ -201,7 +211,7 @@ const Switch_image = function ({ data, nm }) {
 
             <p
               className="name-1"
-            > HIMO C26 MAX</p>
+            > 이름</p>
 
 
           </div>

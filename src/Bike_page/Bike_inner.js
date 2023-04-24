@@ -1,10 +1,10 @@
 
 
-
 import React, { useState, useEffect, useContext, useRef } from "react"
 import './Bike.css'
 import Nav from "../Component/nav"
 import Footer from "../Footer"
+import axios from "axios"
 
 import Bike_COm from "./Bike_COm"
 import Main_Bike from "./Main_Bike"
@@ -14,7 +14,36 @@ import { AiOutlineRight } from "react-icons/ai";
 import BIke_Image from "./BIke_Image"
 import Bike_Special from "./Bike_Special"
 import Switch_image from "../Component/Switch_image"
+import { useParams } from "react-router-dom"
+
 const Bike_inner = function ({ }) {
+
+  const [data, setdata] = useState({});
+
+  const { productname } = useParams();
+
+  useEffect(() => {
+
+    console.log(productname, '아이디좀')
+
+    axios(`/product/${productname}`, {
+      method: 'GET',
+      mode: 'no-cors',
+      headers: { "Access-Control-Allow-Origin": "*" },
+
+      withCredentials: true,
+      credentials: 'same-origin',
+    }).then(response => {
+
+      setdata(response.data);
+      console.log(response.data)
+
+    })
+
+
+
+  }, [])
+
 
   return (
     <div style={{
@@ -30,7 +59,7 @@ const Bike_inner = function ({ }) {
 
       </div>
 
-      <Switch_image>
+      <Switch_image da={data}>
 
       </Switch_image>
 
@@ -55,7 +84,7 @@ const Bike_inner = function ({ }) {
           }}>
 
 
-            <BIke_Image></BIke_Image>
+            <BIke_Image data={data}></BIke_Image>
 
             <div
               style={{
@@ -67,9 +96,9 @@ const Bike_inner = function ({ }) {
                 className="sp-text"
               > SPECIFICATION</p>
             </div>
-            <Bike_Special></Bike_Special>
+            <Bike_Special data={data}></Bike_Special>
 
-            <Bike_You></Bike_You>
+            <Bike_You data={data}></Bike_You>
 
 
 

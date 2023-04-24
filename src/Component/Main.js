@@ -11,7 +11,7 @@ import { AiOutlineMore } from "react-icons/ai";
 import Change_Main from './Change_Main';
 import { AiOutlineRight } from "react-icons/ai";
 
-
+import axios from 'axios';
 
 
 import main_c from '../assets/main_c.svg'
@@ -67,19 +67,19 @@ const Main = function ({ }) {
     },
     {
       color: 2,
-      name: 'HIMO Z16',
+      name: 'HIMOZ16',
 
 
     },
     {
       color: 1,
-      name: 'HIMO C26 MAX',
+      name: 'HIMOC26 MAX',
 
 
     },
     {
       color: 2,
-      name: 'Z16 MAX',
+      name: 'Z16MAX',
 
 
     }
@@ -228,8 +228,8 @@ const Main = function ({ }) {
                 </div>
               </div>
             </div>
-            <div
 
+            <div
 
               style={{
                 width: window.innerWidth * 0.8,
@@ -620,7 +620,14 @@ const Main = function ({ }) {
         </div>
       </div >
 
-      <Footer></Footer>
+
+
+
+
+
+
+
+
     </div >
   )
 }
