@@ -2,36 +2,25 @@
 
 
 import React, { useState, useEffect, useContext, useRef } from "react"
-import Dot from './Dot';
+
 import { AiOutlineDoubleLeft, AiOutlineDoubleRight } from "react-icons/ai";
 import Image__Com from "./Image__Com";
-import black_2 from '../assets/black_2.svg';
-import black_3 from '../assets/black_3.svg';
-
-//import black_4 from '../assets/black_4.svg';
-import black_5 from '../assets/black_5.svg';
-import white_bike_1 from '../assets/white_bike_1.svg'
 
 
 
 
-import main from '../assets/Z16/z16_main.svg'
 
-
-
-import white_bike_2 from '../assets/white_bike_2.svg'
-import white_bike_3 from '../assets/white_bike_3.svg'
-import Bike from '../assets/bike.svg'
-import Black_Bike from '../assets/black_bike.svg'
-import himo from '../assets/bike_image 1.svg'
-import main__Bike from '../assets/Z16/z16_main.svg'
-const Switch_image = function ({ da, nm }) {
+const Switch_image = function ({ da }) {
 
   const black_image = [da.main_image[1].image[1], da.main_image[1].image[1], da.main_image[1].image[1]];
   const white_image = [da.main_image[0].image[1], da.main_image[0].image[2], da.main_image[0].image[3]]
 
+  console.log('??', da.main_image[0].image[0])
+
 
   const [num, setnum] = useState(0);
+
+
   const [image_1, setimage_1] = useState(
     {
       image: da.main_image[0].image[0],
@@ -39,6 +28,14 @@ const Switch_image = function ({ da, nm }) {
     }
 
   );
+  useEffect(() => {
+
+    setimage_1({
+      image: da.main_image[0].image[0],
+      ima: 1,
+    })
+
+  }, [da])
 
   const Ref = useRef(null);
 
