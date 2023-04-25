@@ -11,7 +11,7 @@ import l_3 from '../assets/3.png'
 import l_4 from '../assets/4.png'
 const Sub_Com = function ({ data, nm }) {
 
-  console.log(data.name, '이름')
+
 
   var [col, setcol] = useState(
     false
@@ -38,14 +38,14 @@ const Sub_Com = function ({ data, nm }) {
 
             style={{
               objectFit: 'contain',
-              width: '100%',
+              width: '90%',
               height: '100%',
               display: 'flex',
               alignSelf: 'center',
 
 
             }}
-            src={require(`../assets/${nm + 1}.png`)}
+            src={data.image}
 
 
           ></img>

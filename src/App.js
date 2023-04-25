@@ -29,10 +29,8 @@ const router = createBrowserRouter([{
 
         return rr.data;
 
-
       }
       ,
-
 
       element: <Bike_inner ></Bike_inner>,
     },

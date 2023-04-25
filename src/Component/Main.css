@@ -354,6 +354,8 @@ width: 100%;
   border-style: solid;
   border-width: 1px;
   border-color: #1b1b1b;
+  display: flex;
+  justify-content: center;
 }
 
 .tumb_active{

@@ -61,25 +61,29 @@ const Main = function ({ }) {
   const image_first = [
     {
       color: 1,
-      name: 'HIMO Z20 ',
+      name: 'HIMO C26 MAX',
+      image: 'https://velog.velcdn.com/images/daum091409/post/c3e55b2c-f843-4a9d-8aa6-6e447d1c6160/image.png'
+
+
+    },
+    {
+      color: 2,
+      name: 'HIMO ZB20 MAX',
+      image: 'https://velog.velcdn.com/images/daum091409/post/0b2567dc-e193-45c7-9c2c-04154e03feb6/image.png'
+
+
+    },
+    {
+      color: 1,
+      name: 'HIMO C30R MAX',
+      image: 'https://velog.velcdn.com/images/daum091409/post/fcdf540e-9c9b-4fe7-8031-69628a450c70/image.png'
 
 
     },
     {
       color: 2,
       name: 'HIMO Z16',
-
-
-    },
-    {
-      color: 1,
-      name: 'HIMO C26 MAX',
-
-
-    },
-    {
-      color: 2,
-      name: 'Z16 MAX',
+      image: 'https://velog.velcdn.com/images/daum091409/post/0fe2535c-eecb-47b3-aa95-a1236a7ee1ee/image.png'
 
 
     }
@@ -184,6 +188,7 @@ const Main = function ({ }) {
                   >
                     HIMO C26 MAX
                   </p>
+
                   <div
                     className='first-main-left'>
                     <p
@@ -209,21 +214,43 @@ const Main = function ({ }) {
                   justifyContent: 'center',
                   marginTop: '20px'
                 }}>
-                  <div style={{
-                    width: '200px',
-                    height: '100%',
-                    marginLeft: '30px',
-                    backgroundColor: 'white',
-                    display: 'flex',
-                    flexDirection: 'row',
-                    justifyContent: 'center',
-                    alignContent: 'center',
+                  <Link
 
-                  }}>
-                    <p
-                      className='black-q'
-                    > 자세히 알아보기</p>
-                  </div>
+                    style={{
+                      textDecoration: 'none',
+                      color: 'black'
+                    }}
+                    to='/product/HIMO C26 MAX' >
+
+
+
+
+                    <div style={{
+                      width: '200px',
+                      height: '30px',
+                      marginLeft: '30px',
+                      backgroundColor: 'white',
+                      display: 'flex',
+                      flexDirection: 'row',
+                      justifyContent: 'center',
+                      alignContent: 'center',
+
+                    }}>
+                      <p
+                        className='black-q'
+                      > 자세히 알아보기</p>
+                    </div>
+
+
+                  </Link>
+
+
+
+
+
+
+
+
 
                 </div>
               </div>
@@ -281,21 +308,33 @@ const Main = function ({ }) {
                   justifyContent: 'center',
                   marginTop: '20px'
                 }}>
-                  <div style={{
-                    width: '200px',
-                    height: '100%',
-                    marginLeft: '30px',
-                    backgroundColor: 'white',
-                    display: 'flex',
-                    flexDirection: 'row',
-                    justifyContent: 'center',
-                    alignContent: 'center',
 
-                  }}>
-                    <p
-                      className='black-q'
-                    > 자세히 알아보기</p>
-                  </div>
+
+                  <Link
+
+                    style={{
+                      textDecoration: 'none',
+                      color: 'black'
+                    }}
+                    to='/product/HIMO Z16' >
+
+                    <div style={{
+                      width: '200px',
+                      height: '30px',
+                      marginLeft: '30px',
+                      backgroundColor: 'white',
+                      display: 'flex',
+                      flexDirection: 'row',
+                      justifyContent: 'center',
+                      alignContent: 'center',
+
+                    }}>
+                      <p
+                        className='black-q'
+                      > 자세히 알아보기</p>
+                    </div>
+
+                  </Link>
 
                 </div>
               </div>
@@ -352,22 +391,31 @@ const Main = function ({ }) {
                   justifyContent: 'center',
                   marginTop: '20px'
                 }}>
-                  <div style={{
-                    width: '200px',
-                    height: '100%',
-                    marginLeft: '30px',
-                    backgroundColor: 'white',
-                    display: 'flex',
-                    flexDirection: 'row',
-                    justifyContent: 'center',
-                    alignContent: 'center',
 
-                  }}>
-                    <p
-                      className='black-q'
-                    > 자세히 알아보기</p>
-                  </div>
+                  <Link
 
+                    style={{
+                      textDecoration: 'none',
+                      color: 'black'
+                    }}
+                    to='/product/HIMO ZB20 MAX' >
+
+                    <div style={{
+                      width: '200px',
+                      height: '30px',
+                      marginLeft: '30px',
+                      backgroundColor: 'white',
+                      display: 'flex',
+                      flexDirection: 'row',
+                      justifyContent: 'center',
+                      alignContent: 'center',
+
+                    }}>
+                      <p
+                        className='black-q'
+                      > 자세히 알아보기</p>
+                    </div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -450,7 +498,7 @@ const Main = function ({ }) {
               textDecoration: 'none',
               color: 'black'
             }}
-            to='/product' >
+            to='/products' >
             <p className='bike--p'>
               더 많은 자전거
             </p>
