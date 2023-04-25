@@ -109,7 +109,7 @@ const Nav = function ({ }) {
 
               {
                 click &&
-                ["Himo Z16", "Himo Z16 Max", "Himo Z20", "Himo Z20 Max"]
+                ["HIMO Z16", "HIMO Z16 MAX", "HIMO Z20", "HIMO C26 MAX"]
                   .map((el, index) => {
                     return <Nav_Com
                       data={el}

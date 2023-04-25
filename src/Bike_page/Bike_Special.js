@@ -6,49 +6,6 @@ import Bike_COm from "./Bike_COm"
 
 const Bike_Special = function ({ data, nm }) {
 
- const bike_gen = [
-  {
-   name: 'Range',
-   spec: '100 Km Max Range'
-  },
-  {
-   name: 'Speed',
-   spec: '125 Km/h'
-  },
-  {
-   name: 'Tires',
-   spec: 'CST 26 x 2.125'
-  },
-  {
-   name: 'Weight',
-   spec: '25 Kg'
-  }, {
-   name: 'Transmission',
-   spec: '7-Speed Shimano'
-  }
- ]
- const bike_elec = [
-  {
-   name: 'Motor',
-   spec: '250W Hall Brushless Gear DC Motor'
-  },
-  {
-   name: 'Battery',
-   spec: '36V/ 10.5Ah'
-  },
-  {
-   name: 'Charger',
-   spec: '2AH Charger'
-  },
-  {
-   name: 'Display',
-   spec: 'HD LCD Dispaly'
-  }, {
-   name: 'Torque',
-   spec: '22N.M'
-  }
- ]
-
 
  return (
 
@@ -76,7 +33,7 @@ const Bike_Special = function ({ data, nm }) {
 
 
      {
-      bike_gen.map((el, index) => {
+      data[0].General.map((el, index) => {
        return <Bike_COm
         key={index}
 
@@ -101,7 +58,7 @@ const Bike_Special = function ({ data, nm }) {
      </p>
 
      {
-      bike_elec.map((el, index) => {
+      data[0].Elec.map((el, index) => {
        return <Bike_COm
         key={index}
 

@@ -65,7 +65,7 @@ const Bike_You_Com = function ({ data, num, cli, color }) {
         height: '100%',
         borderRadius: '50%'
        }}
-       src={data.youtuber}
+       src={data.profile}
 
       >
 
@@ -97,7 +97,7 @@ const Bike_You_Com = function ({ data, num, cli, color }) {
       }}
 
      >
-      {data.name}
+      {data.youtuber}
      </p>
 
     </div>

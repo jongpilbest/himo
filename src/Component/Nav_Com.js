@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect, useContext, useRef } from "react"
 
-
+import { Link } from "react-router-dom"
 const Nav_Com = function ({ data, nm }) {
 
 
@@ -15,7 +15,13 @@ const Nav_Com = function ({ data, nm }) {
  return (
 
 
-  <>
+  <Link
+
+   style={{
+    textDecoration: 'none',
+    color: 'black'
+   }}
+   to={`/product/${data}`}>
    <div
     onMouseOver={() => {
 
@@ -50,7 +56,7 @@ const Nav_Com = function ({ data, nm }) {
     >{data}</p>
 
    </div>
-  </>
+  </Link>
  )
 
 }

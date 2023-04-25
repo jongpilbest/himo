@@ -33,7 +33,7 @@ const Bike_COm = function ({ data }) {
       <p
 
        className="border-text"
-      >{data.name}</p>
+      >{data[0]}</p>
      </div>
      <div
       style={{
@@ -45,7 +45,7 @@ const Bike_COm = function ({ data }) {
       <p
 
        className="border-text-1"
-      >{data.spec}</p>
+      >{data[1]}</p>
 
      </div>
 

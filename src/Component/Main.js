@@ -61,25 +61,25 @@ const Main = function ({ }) {
   const image_first = [
     {
       color: 1,
-      name: 'HIMO Z20 Folding E-Bike',
+      name: 'HIMO Z20 ',
 
 
     },
     {
       color: 2,
-      name: 'HIMOZ16',
+      name: 'HIMO Z16',
 
 
     },
     {
       color: 1,
-      name: 'HIMOC26 MAX',
+      name: 'HIMO C26 MAX',
 
 
     },
     {
       color: 2,
-      name: 'Z16MAX',
+      name: 'Z16 MAX',
 
 
     }
@@ -624,7 +624,7 @@ const Main = function ({ }) {
 
 
 
-
+      <Footer></Footer>
 
 
 

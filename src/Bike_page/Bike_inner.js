@@ -14,35 +14,17 @@ import { AiOutlineRight } from "react-icons/ai";
 import BIke_Image from "./BIke_Image"
 import Bike_Special from "./Bike_Special"
 import Switch_image from "../Component/Switch_image"
-import { useParams } from "react-router-dom"
+import { useLoaderData, useParams } from "react-router-dom"
 
 const Bike_inner = function ({ }) {
 
-  const [data, setdata] = useState({});
+
+
 
   const { productname } = useParams();
 
-  useEffect(() => {
+  const data = useLoaderData();
 
-    console.log(productname, '아이디좀')
-
-    axios(`/product/${productname}`, {
-      method: 'GET',
-      mode: 'no-cors',
-      headers: { "Access-Control-Allow-Origin": "*" },
-
-      withCredentials: true,
-      credentials: 'same-origin',
-    }).then(response => {
-
-      setdata(response.data);
-      console.log(response.data)
-
-    })
-
-
-
-  }, [])
 
 
   return (
@@ -59,7 +41,7 @@ const Bike_inner = function ({ }) {
 
       </div>
 
-      <Switch_image da={data}>
+      <Switch_image da={data[0]}>
 
       </Switch_image>
 
@@ -84,7 +66,7 @@ const Bike_inner = function ({ }) {
           }}>
 
 
-            <BIke_Image data={data}></BIke_Image>
+            <BIke_Image data={data[0].image_Des}></BIke_Image>
 
             <div
               style={{
@@ -96,9 +78,9 @@ const Bike_inner = function ({ }) {
                 className="sp-text"
               > SPECIFICATION</p>
             </div>
-            <Bike_Special data={data}></Bike_Special>
 
-            <Bike_You data={data}></Bike_You>
+            <Bike_Special data={data[0].Special}></Bike_Special>
+            <Bike_You data={data[0]}></Bike_You>
 
 
 

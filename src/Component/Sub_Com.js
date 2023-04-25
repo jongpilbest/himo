@@ -11,7 +11,7 @@ import l_3 from '../assets/3.png'
 import l_4 from '../assets/4.png'
 const Sub_Com = function ({ data, nm }) {
 
-  console.log(data.name)
+  console.log(data.name, '이름')
 
   var [col, setcol] = useState(
     false
@@ -26,7 +26,12 @@ const Sub_Com = function ({ data, nm }) {
 
 
   return (
-    <Link to={`/product/${data.name}`}>
+    <Link
+      style={{
+        textDecoration: 'none',
+        color: 'black'
+      }}
+      to={`/product/${data.name}`}>
       <div className='tumb-main'>
         <div className={col ? 'tumb' : 'tumb_active'}>
           <img

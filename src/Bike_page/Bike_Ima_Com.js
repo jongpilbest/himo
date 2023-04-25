@@ -9,8 +9,6 @@ const Bike_Ima_Com = function ({ data }) {
 
 
 
-
-
   return (
 
     <>
@@ -20,7 +18,7 @@ const Bike_Ima_Com = function ({ data }) {
         style={{
           width: window.innerWidth * 0.8,
           height: '100%',
-          backgroundColor: 'skyblue',
+          backgroundColor: 'white',
           display: 'flex',
 
           position: 'relative',
@@ -40,7 +38,7 @@ const Bike_Ima_Com = function ({ data }) {
           <img
 
             style={{
-              //objectFit: 'contain',
+              objectFit: 'cover',
               width: '100%',
               height: '100%',
               display: 'flex',
@@ -55,7 +53,7 @@ const Bike_Ima_Com = function ({ data }) {
           className='second-text-1'>
           <div className='second-text-main-1'>
             <p className='macc-p-1'>
-              {data.title}
+              {data.Big_Tile}
             </p>
 
           </div>
@@ -81,7 +79,7 @@ const Bike_Ima_Com = function ({ data }) {
 
               className='ma--p-1'
             >
-                {data.sub}
+                {data.Small_tite}
 
               </p>
 

@@ -7,30 +7,8 @@ import Bike_You_Com from "./Bike_You_Com"
 const Bike_You = function ({ data, nm }) {
 
   const [clik_change, setclick_Change] = useState(0)
+  //console.log(data[0].youtube[0].youtube_linkd, '유투브확인')
 
-
-
-  const Bike_youtuve = [
-    {
-
-      name: 'Jakreview',
-      src: 'https://www.youtube.com/embed/AMI03fgKDq4',
-      youtuber: 'https://yt3.ggpht.com/g-TdBrnE-bUUZ7t5VlArQj9k3TWlwr9dtepLaDTD0sdmdgTm1Yxs25lgF_eQM6FiqoQE9CVtHw=s88-c-k-c0x00ffffff-no-rj'
-    },
-    {
-      name: 'Filipe View',
-      src: 'https://www.youtube.com/embed/rNdKanHvu6Y',
-      youtuber: 'https://yt3.ggpht.com/BRrT6NZkFGyBieGmPV7OH7CtLx6BPvmFAFEuq4zL9g9A8c6nWWb59r8xWFPRhDffp4g6oN1cOQ=s88-c-k-c0x00ffffff-no-rj'
-    },
-    {
-
-      name: 'Urban Digi Essentials',
-      src: 'https://www.youtube.com/embed/twUI_Z4OZDo',
-      youtuber: 'https://yt3.ggpht.com/ytc/AGIKgqMH5jVlyX8uxKSz8leDMo7XWZzhwYjF7HAKoour=s88-c-k-c0x00ffffff-no-rj'
-
-    }
-
-  ]
 
   return (
 
@@ -69,7 +47,7 @@ const Bike_You = function ({ data, nm }) {
 
               </p>
               <p className='macc'>
-                HIMO Z20 MAX
+                {data.name}
               </p>
             </div>
           </div>
@@ -90,7 +68,7 @@ const Bike_You = function ({ data, nm }) {
             {
 
 
-              Bike_youtuve.map((el, index) => {
+              data.youtube.map((el, index) => {
 
 
                 return <Bike_You_Com
@@ -99,6 +77,7 @@ const Bike_You = function ({ data, nm }) {
                   color={clik_change}
                   num={index}
                   cli={(el) => {
+                    //console.log(el, '여기요')
                     setclick_Change(el)
                   }}
 
@@ -130,7 +109,7 @@ const Bike_You = function ({ data, nm }) {
                 border: 'none'
               }}
 
-              width="100%" height="100%" src={Bike_youtuve[clik_change].src} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              width="100%" height="100%" src={data.youtube[clik_change].youtube_linkd} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
           }
 

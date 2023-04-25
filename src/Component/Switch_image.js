@@ -24,14 +24,17 @@ import white_bike_3 from '../assets/white_bike_3.svg'
 import Bike from '../assets/bike.svg'
 import Black_Bike from '../assets/black_bike.svg'
 import himo from '../assets/bike_image 1.svg'
+import main__Bike from '../assets/Z16/z16_main.svg'
 const Switch_image = function ({ da, nm }) {
-  console.log(da, '데이터')
-  const black_image = [black_2, black_3, black_5];
-  const white_image = [white_bike_1, white_bike_2, white_bike_3]
+
+  const black_image = [da.main_image[1].image[1], da.main_image[1].image[1], da.main_image[1].image[1]];
+  const white_image = [da.main_image[0].image[1], da.main_image[0].image[2], da.main_image[0].image[3]]
+
+
   const [num, setnum] = useState(0);
   const [image_1, setimage_1] = useState(
     {
-      image: Bike,
+      image: da.main_image[0].image[0],
       ima: 1,
     }
 
@@ -127,9 +130,12 @@ const Switch_image = function ({ da, nm }) {
 
               <img
                 style={{
-                  transform: 'scale(1.1)'
+                  transform: 'scale(1.0)',
+                  objectFit: 'contain'
                 }}
-                src={image_1.image}></img>
+                src={image_1.image}
+
+              ></img>
 
             </div>
             <div
@@ -179,7 +185,6 @@ const Switch_image = function ({ da, nm }) {
 
 
 
-
           </div>
 
 
@@ -211,7 +216,7 @@ const Switch_image = function ({ da, nm }) {
 
             <p
               className="name-1"
-            > 이름</p>
+            > {da.name}</p>
 
 
           </div>
@@ -235,7 +240,7 @@ const Switch_image = function ({ da, nm }) {
               onClick={() => {
                 setnum(0)
                 setimage_1({
-                  image: Black_Bike,
+                  image: da.main_image[1].image[0],
                   ima: 2
                 });
                 //Ref.current.style.backgroundColor = 'white';
@@ -253,7 +258,7 @@ const Switch_image = function ({ da, nm }) {
               onClick={() => {
                 setnum(0)
                 setimage_1({
-                  image: Bike,
+                  image: da.main_image[0].image[0],
                   ima: 1
                 });
                 Ref.current.style.backgroundColor = '#1B1B1B';

@@ -13,34 +13,36 @@ const Image__Com = function ({ data }) {
 
 
 
- return (
+  return (
 
-  <div
+    <div
 
-   style={{
-    width: window.innerWidth * 0.8,
-    height: '100%',
-    backgroundColor: 'white',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+      style={{
+        width: window.innerWidth * 0.8,
+        height: '100%',
+        backgroundColor: 'white',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
 
-   }}>
-
-
-   <img
-    style={{
-     width: '100%',
-     height: '100%',
-     transform: 'scale(1)'
-    }}
-    src={data}></img>
+      }}>
 
 
+      <img
+        style={{
+          width: '80%',
+          height: '80%',
+          transform: 'scale(1.2)',
+          objectFit: 'contain'
 
-  </div>
+        }}
+        src={data}></img>
 
- )
+
+
+    </div>
+
+  )
 
 }
 
