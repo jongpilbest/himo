@@ -38,10 +38,10 @@ const Dot = function ({ click, data, cor }) {
 
     style={{
      position: 'absolute',
-     top: `${hei}%`,
+     bottom: '30px',
      width: '13px',
      height: '13px',
-     right: '20px',
+     right: `${35 + data * 10}%`,
      color: col
     }}
    ></AiTwotoneCheckCircle>

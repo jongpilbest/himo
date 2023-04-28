@@ -5,14 +5,26 @@ import React, { useState, useEffect, useContext, useRef } from "react"
 import { AiOutlineInstagram, AiFillYoutube } from "react-icons/ai";
 import { RiKakaoTalkFill } from "react-icons/ri";
 import { AiFillTwitterCircle, AiTwotoneCheckCircle } from "react-icons/ai";
-import './Component/Main.css'
-const Footer = function ({ data, nm }) {
+
+const footer1 = function ({ data, nm }) {
 
 
 
   return (
 
-    <div className="foot">
+    <div style={{
+      width: '100%',
+
+
+
+      backgroundColor: '#1b1b1b',
+      display: 'flex',
+      justifyContent: 'center',
+      overflow: 'hidden',
+
+
+
+    }}>
 
       <div style={{
         width: '80%',
@@ -26,7 +38,7 @@ const Footer = function ({ data, nm }) {
         alignSelf: 'center'
       }}>
         <div style={{
-          width: '50%',
+          width: '100%',
           height: '80%',
 
         }}>
@@ -121,4 +133,4 @@ const Footer = function ({ data, nm }) {
 
 }
 
-export default Footer
+export default footer1

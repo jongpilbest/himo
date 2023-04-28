@@ -15,19 +15,34 @@ import BIke_Image from "./BIke_Image"
 import Bike_Special from "./Bike_Special"
 import Switch_image from "../Component/Switch_image"
 import { useLoaderData, useParams } from "react-router-dom"
+import { useMediaQuery } from "react-responsive"
+export const Mobile = ({ children }) => {
+  const isMobile = useMediaQuery({
+    query: "(max-width:768px)"
+  });
+  return <>{isMobile && children}</>
+}
+
+export const Pc = ({ children }) => {
+  const isPc = useMediaQuery({
+    query: "(min-width:769px)"
+  });
+  return <>{isPc && children}</>
+}
 
 const Bike_inner = function ({ }) {
 
 
 
 
-  const { productname } = useParams();
+
 
   const data = useLoaderData();
 
 
 
   return (
+
     <div style={{
       width: '100%',
       height: '300vh',
@@ -46,12 +61,11 @@ const Bike_inner = function ({ }) {
       </Switch_image>
 
 
-      <div style={{
-        width: '100%',
-        display: 'flex',
-        height: '230vh',
-        justifyContent: 'center'
-      }}>
+      <div
+        className="main-heigth"
+
+
+      >
         <div style={{
           width: '80%',
           height: '100px',
@@ -68,16 +82,6 @@ const Bike_inner = function ({ }) {
 
             <BIke_Image data={data[0].image_Des}></BIke_Image>
 
-            <div
-              style={{
-                marginTop: '100px'
-              }}
-
-            >
-              <p
-                className="sp-text"
-              > SPECIFICATION</p>
-            </div>
 
             <Bike_Special data={data[0].Special}></Bike_Special>
             <Bike_You data={data[0]}></Bike_You>
@@ -92,7 +96,7 @@ const Bike_inner = function ({ }) {
 
         </div>
       </div>
-      <Footer></Footer>
+
 
     </div >
   )

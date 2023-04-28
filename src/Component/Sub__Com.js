@@ -1,0 +1,66 @@
+
+
+
+import React, { useState, useEffect, useContext, useRef } from "react"
+import { Link } from 'react-router-dom';
+import './Main.css'
+import Bike from '../assets/bike.svg'
+import l_1 from '../assets/1.png'
+import l_2 from '../assets/2.png'
+import l_3 from '../assets/3.png'
+import l_4 from '../assets/4.png'
+const Sub__Com = function ({ data, nm }) {
+
+
+
+ var [col, setcol] = useState(
+  false
+ )
+
+ useEffect(() => {
+  if (data.color == 1) {
+   setcol(true);
+  }
+
+ }, [])
+
+
+ return (
+  <Link
+   style={{
+    textDecoration: 'none',
+    color: 'black'
+   }}
+   to={`/product/${data.name}`}>
+   <div className='tumb-main'>
+    <div className={col ? 'tumb1' : 'tumb_active1'}>
+     <img
+
+      style={{
+       objectFit: 'contain',
+       width: '90%',
+       height: '100%',
+       display: 'flex',
+       alignSelf: 'center',
+
+
+      }}
+      src={data.image}
+
+
+     ></img>
+    </div>
+    <div
+     className='tumb_text'
+    >
+     <p className='Bike-p'>
+      {data.name}
+     </p>
+    </div>
+   </div >
+  </Link>
+ )
+
+}
+
+export default Sub__Com

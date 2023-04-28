@@ -6,12 +6,39 @@ import React, { useState, useEffect, useContext, useRef } from "react"
 import { AiOutlineDoubleLeft, AiOutlineDoubleRight } from "react-icons/ai";
 import Image__Com from "./Image__Com";
 
+import { useMediaQuery } from "react-responsive";
 
+export const Mobile = ({ children }) => {
+  const isMobile = useMediaQuery({
+    query: "(max-width:768px)"
+  });
+  return <>{isMobile && children}</>
+}
 
-
+export const Pc = ({ children }) => {
+  const isPc = useMediaQuery({
+    query: "(min-width:769px)"
+  });
+  return <>{isPc && children}</>
+}
 
 const Switch_image = function ({ da }) {
 
+
+
+  const [resize, setsize] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const windowResize = () => {
+      setsize(window.innerWidth)
+    }
+
+    window.addEventListener(`resize`, windowResize);
+
+    return () => {
+      window.removeEventListener(`resize`, windowResize);
+    }
+  }, []);
   const black_image = [da.main_image[1].image[1], da.main_image[1].image[1], da.main_image[1].image[1]];
   const white_image = [da.main_image[0].image[1], da.main_image[0].image[2], da.main_image[0].image[3]]
 
@@ -48,7 +75,7 @@ const Switch_image = function ({ da }) {
   }
 
   const gogo = function () {
-    var hey = window.innerWidth * 0.8 * -1
+    var hey = resize * 0.8 * -1
     if (num > 3) {
       setnum(0);
     }
@@ -56,7 +83,7 @@ const Switch_image = function ({ da }) {
       setnum(3);
     }
     return {
-      width: window.innerWidth * 0.8 * 4,
+      width: resize * 0.8 * 4,
       height: '100%',
 
       display: 'flex',
@@ -71,6 +98,7 @@ const Switch_image = function ({ da }) {
 
 
     <>
+
       <div className='first-main-11'>
         <div
           ref={RRef}
@@ -112,7 +140,7 @@ const Switch_image = function ({ da }) {
             <div
               ref={Ref}
               style={{
-                width: window.innerWidth * 0.8,
+                width: resize * 0.8 - 1,
                 height: '100%',
                 backgroundColor: '#1B1B1B',
 
@@ -128,7 +156,8 @@ const Switch_image = function ({ da }) {
               <img
                 style={{
                   transform: 'scale(1.0)',
-                  objectFit: 'contain'
+                  objectFit: 'contain',
+                  width: '100%'
                 }}
                 src={image_1.image}
 
@@ -138,7 +167,7 @@ const Switch_image = function ({ da }) {
             <div
 
               style={{
-                width: window.innerWidth * 0.8,
+                width: resize * 0.8,
                 height: '100%',
                 backgroundColor: 'white',
                 display: 'flex',
@@ -189,6 +218,10 @@ const Switch_image = function ({ da }) {
 
       </div>
 
+
+
+
+
       <div style={{
         width: '100%',
 
@@ -204,79 +237,154 @@ const Switch_image = function ({ da }) {
           justifyContent: 'space-between',
           marginTop: '20px'
         }}>
+          <Pc>
 
-          <div style={{
-            width: '40%',
-            height: '100%',
+            <div style={{
+              width: '40%',
+              height: '100%',
 
-          }}>
+            }}>
 
-            <p
-              className="name-1"
-            > {da.name}</p>
+              <p
+                className="name-1"
+              > {da.name}</p>
 
-
-          </div>
-
-          <div style={{
-            width: '15%',
-            height: '100%',
-
-            alignContent: 'center',
-            display: 'flex',
-            justifyContent: 'space-between'
-          }}>
-            <p
-              className="first-p-1"
-            >
-              Color
-            </p>
-
-            <div
-
-              onClick={() => {
-                setnum(0)
-                setimage_1({
-                  image: da.main_image[1].image[0],
-                  ima: 2
-                });
-                //Ref.current.style.backgroundColor = 'white';
-                //RRef.current.childNodes[0].style.color = 'black'
-
-              }}
-              style={{
-                width: '40px',
-                height: '40px',
-                backgroundColor: 'black'
-              }}>
-
-            </div>
-            <div
-              onClick={() => {
-                setnum(0)
-                setimage_1({
-                  image: da.main_image[0].image[0],
-                  ima: 1
-                });
-                Ref.current.style.backgroundColor = '#1B1B1B';
-                RRef.current.childNodes[0].style.color = 'white'
-                RRef.current.childNodes[1].style.color = 'white'
-              }}
-
-              style={{
-                width: '40px',
-                height: '40px',
-                backgroundColor: 'white',
-                borderWidth: '1px',
-                borderStyle: 'solid',
-                borderColor: 'black'
-              }}>
 
             </div>
 
-          </div>
+            <div style={{
+              width: '15%',
+              height: '100%',
+
+              alignContent: 'center',
+              display: 'flex',
+              justifyContent: 'flex-end'
+            }}>
 
 
+              <div
+
+                onClick={() => {
+                  setnum(0)
+                  setimage_1({
+                    image: da.main_image[1].image[0],
+                    ima: 2
+                  });
+                  //Ref.current.style.backgroundColor = 'white';
+                  //RRef.current.childNodes[0].style.color = 'black'
+
+                }}
+                style={{
+                  width: '30px',
+                  height: '30px',
+                  backgroundColor: 'black',
+
+                  marginRight: '20px'
+                }}>
+
+              </div>
+              <div
+                onClick={() => {
+                  setnum(0)
+                  setimage_1({
+                    image: da.main_image[0].image[0],
+                    ima: 1
+                  });
+                  Ref.current.style.backgroundColor = '#1B1B1B';
+                  RRef.current.childNodes[0].style.color = 'white'
+                  RRef.current.childNodes[1].style.color = 'white'
+                }}
+
+                style={{
+                  width: '30px',
+                  height: '30px',
+                  backgroundColor: 'white',
+                  borderWidth: '1px',
+                  borderStyle: 'solid',
+                  borderColor: 'black',
+
+                }}>
+
+              </div>
+
+            </div>
+
+          </Pc>
+          <Mobile>
+
+
+
+            <div style={{
+              width: '100%',
+              height: '5vh',
+              display: 'flex',
+
+
+            }}>
+              <div
+
+                onClick={() => {
+                  setnum(0)
+                  setimage_1({
+                    image: da.main_image[1].image[0],
+                    ima: 2
+                  });
+                  //Ref.current.style.backgroundColor = 'white';
+                  //RRef.current.childNodes[0].style.color = 'black'
+
+                }}
+                style={{
+                  width: '30px',
+                  height: '30px',
+                  backgroundColor: 'black',
+                  marginRight: '15px',
+                  borderRadius: '50%'
+                }}>
+
+              </div>
+              <div
+                onClick={() => {
+                  setnum(0)
+                  setimage_1({
+                    image: da.main_image[0].image[0],
+                    ima: 1
+                  });
+                  Ref.current.style.backgroundColor = '#1B1B1B';
+                  RRef.current.childNodes[0].style.color = 'white'
+                  RRef.current.childNodes[1].style.color = 'white'
+                }}
+
+                style={{
+                  width: '30px',
+                  height: '30px',
+                  backgroundColor: 'white',
+                  borderWidth: '1px',
+                  borderStyle: 'solid',
+                  borderRadius: '50%'
+                }}>
+
+              </div>
+
+            </div>
+            <div style={{
+              width: '100%',
+              height: '5vh',
+
+            }}>
+
+              <p
+                style={{
+
+                  margin: 0
+                }}
+                className="name--1"
+              > {da.name}</p>
+
+
+            </div>
+
+
+          </Mobile>
         </div>
 
 

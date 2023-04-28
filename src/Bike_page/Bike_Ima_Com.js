@@ -5,6 +5,19 @@ import React, { useState, useEffect, useContext, useRef } from "react"
 
 
 const Bike_Ima_Com = function ({ data }) {
+  const [resize, setsize] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const windowResize = () => {
+      setsize(window.innerWidth)
+    }
+
+    window.addEventListener(`resize`, windowResize);
+
+    return () => {
+      window.removeEventListener(`resize`, windowResize);
+    }
+  }, []);
 
 
 
@@ -16,10 +29,20 @@ const Bike_Ima_Com = function ({ data }) {
       <div
 
         style={{
-          width: window.innerWidth * 0.8,
+          width: resize * 0.8,
           height: '100%',
           backgroundColor: 'white',
           display: 'flex',
+
+
+
+
+
+
+
+
+
+
 
           position: 'relative',
 
@@ -30,7 +53,7 @@ const Bike_Ima_Com = function ({ data }) {
 
 
         <div style={{
-          width: window.innerWidth * 0.5,
+          width: resize * 0.5,
           height: '100%',
 
         }}>

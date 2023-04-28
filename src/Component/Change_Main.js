@@ -10,7 +10,7 @@ const Change_Main = function ({ data }) {
 
       <div style={{
 
-        width: window.innerWidth * 0.8 * 0.5,
+        width: '50%',
         height: '100%',
         backgroundColor: '#1b1b1b',
         position: 'relative'
@@ -24,7 +24,7 @@ const Change_Main = function ({ data }) {
 
           style={{
 
-            transform: 'scale(1.2)',
+
             width: '100%',
             height: '100%',
             display: 'flex',
@@ -38,7 +38,7 @@ const Change_Main = function ({ data }) {
       </div>
       <div
         style={{
-          width: window.innerWidth * 0.8 * 0.5,
+          width: '50%',
           height: '100%',
           backgroundColor: 'white'
         }}

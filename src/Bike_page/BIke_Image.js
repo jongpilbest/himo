@@ -3,17 +3,50 @@
 import React, { useState, useEffect, useContext, useRef } from "react"
 import { AiOutlineDoubleLeft, AiOutlineDoubleRight } from "react-icons/ai";
 import { AiOutlineRight } from "react-icons/ai";
-import machine_1 from '../assets/machine_1.svg'
-import Image__Com from "../Component/Image__Com";
+
 import Bike_Ima_Com from "./Bike_Ima_Com";
-import ma_1 from '../assets/ma_1.png'
-import ma_2 from '../assets/ma_2.png'
-import ma_3 from '../assets/ma_3.png'
-import ma_4 from '../assets/ma_4.png'
+import Bike_Ima__Com from "./Bike__image";
 
+import { useMediaQuery } from "react-responsive";
+export const Mobile = ({ children }) => {
+  const isMobile = useMediaQuery({
+    query: "(max-width:768px)"
+  });
+  return <>{isMobile && children}</>
+}
 
+export const Pc = ({ children }) => {
+  const isPc = useMediaQuery({
+    query: "(min-width:769px)"
+  });
+  return <>{isPc && children}</>
+}
 
 const BIke_Image = function ({ data, nm }) {
+
+
+  const [resize, setsize] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const windowResize = () => {
+      setsize(window.innerWidth)
+    }
+
+    window.addEventListener(`resize`, windowResize);
+
+    return () => {
+      window.removeEventListener(`resize`, windowResize);
+    }
+  }, []);
+
+
+
+
+
+
+
+
+
 
 
 
@@ -25,7 +58,7 @@ const BIke_Image = function ({ data, nm }) {
   const RRef = useRef(null);
 
   const gogo = function () {
-    var hey = window.innerWidth * 0.8 * -1
+    var hey = resize * 0.8 * -1
     if (num >= data.length) {
       setnum(0);
     }
@@ -33,7 +66,7 @@ const BIke_Image = function ({ data, nm }) {
       setnum(data.length);
     }
     return {
-      width: window.innerWidth * 0.8 * data.length,
+      width: resize * 0.8 * data.length,
       height: '100%',
       backgroundColor: 'pink',
       display: 'flex',
@@ -49,52 +82,102 @@ const BIke_Image = function ({ data, nm }) {
 
 
     <>
-      <div className='first-main-11'>
-        <div
-          ref={RRef}
-          style={{
+      <Pc>
 
-            width: '100%',
 
-          }}
-          className='first-main-sub1'>
-          <AiOutlineRight
-            onClick={() => {
-              setnum((el) => el + 1)
-            }}
-            className='arrow'
+        <div className='first-main-11'>
+          <div
+            ref={RRef}
             style={{
-              color: 'white',
-              zIndex: 2
+
+              width: '100%',
 
             }}
-          ></AiOutlineRight>
+            className='first-main-sub1'>
+            <AiOutlineRight
+              onClick={() => {
+                setnum((el) => el + 1)
+              }}
+              className='arrow'
+              style={{
+                color: 'white',
+                zIndex: 2
+
+              }}
+            ></AiOutlineRight>
 
 
-          <div style={gogo()}
-          >
+            <div style={gogo()}
+            >
 
 
-            {
-              data.map((el, index) => {
-                return <Bike_Ima_Com data={el} key={index}></Bike_Ima_Com>
-              })}
+              {
+                data.map((el, index) => {
+                  return <Bike_Ima_Com data={el} key={index}></Bike_Ima_Com>
+                })}
 
 
 
 
+
+
+            </div>
 
 
           </div>
 
+        </div>
+
+
+
+      </Pc>
+
+      <Mobile>
+        <div className='first-main-11'>
+          <div
+            ref={RRef}
+            style={{
+
+              width: '100%',
+
+            }}
+            className='first-main-sub1'>
+            <AiOutlineRight
+              onClick={() => {
+                setnum((el) => el + 1)
+              }}
+              className='arrow'
+              style={{
+                color: 'white',
+                zIndex: 2
+
+              }}
+            ></AiOutlineRight>
+
+
+            <div style={gogo()}
+            >
+
+
+              {
+                data.map((el, index) => {
+                  return <Bike_Ima__Com data={el} key={index}></Bike_Ima__Com>
+                })}
+
+
+
+
+
+            </div>
+
+
+          </div>
 
         </div>
 
-      </div>
 
 
-
-
+      </Mobile>
 
     </>
   )

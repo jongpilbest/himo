@@ -5,7 +5,7 @@ import React, { useState, useEffect, useContext, useRef } from "react"
 
 import './Bike.css'
 
-const Bike_COm = function ({ data }) {
+const Bike__Com = function ({ data }) {
 
 
 
@@ -36,7 +36,7 @@ const Bike_COm = function ({ data }) {
 
       <p
 
-       className="border-text"
+       className="border-text-1"
       >{data[0]}</p>
      </div>
      <div
@@ -48,7 +48,7 @@ const Bike_COm = function ({ data }) {
      >
       <p
 
-       className="border-text-1"
+       className="border-text-11"
       >{data[1]}</p>
 
      </div>
@@ -63,4 +63,4 @@ const Bike_COm = function ({ data }) {
 
 }
 
-export default Bike_COm
+export default Bike__Com

@@ -4,10 +4,11 @@ import Bike_inner from './Bike_page/Bike_inner';
 import { RouterProvider } from 'react-router-dom';
 import { createBrowserRouter } from 'react-router-dom';
 import Bike_Categori from './Bike_Categori/Bike_Categori';
+
 import axios from 'axios';
 const router = createBrowserRouter([{
   path: '/',
-  element: <RootLayout></RootLayout>,
+  element: <RootLayout RootLayout ></RootLayout>,
   children: [
     { path: '/', element: <Main></Main> },
     {
@@ -47,7 +48,7 @@ function App() {
   return (
     <RouterProvider router={router}>
     </RouterProvider>
-  );
+  )
 }
 
 export default App;

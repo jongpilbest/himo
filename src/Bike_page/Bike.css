@@ -41,6 +41,13 @@
 margin: 0;
 
 }
+.name--1 {
+  font-family: "Heebo", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0;
+
+}
 
 .second-image-1 {
 
@@ -69,7 +76,15 @@ margin: 0;
   font-weight: bold;
   text-align: center;
 }
-
+.macc--p-1 {
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
 .ma--p-1 {
   font-family: "Noto Sans KR", sans-serif;
 
@@ -80,11 +95,30 @@ margin: 0;
   color: white;
   margin-top: auto;
 }
+.ma---p-1 {
+  font-family: "Noto Sans KR", sans-serif;
+
+  margin-bottom: auto;
+  font-size: 10px;
+  text-align: start;
+  font-weight: 100;
+  color: white;
+  margin-top: auto;
+}
+
+
+
 .sp-text{
     font-family: "Heebo", sans-serif;
       font-weight: bold;
       font-size:30px;
       margin: 0;
+}
+.sp--text {
+  font-family: "Heebo", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0;
 }
 
 .border{
@@ -109,11 +143,27 @@ margin: 0;
     font-weight: bold;
     font-size: 18px;
 }
+
+
+.border-text {
+  font-family: "Heebo", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
 .border-text-1 {
   font-family: "Heebo", sans-serif;
 
   font-size: 16px;
 }
+
+
+.border-text-11 {
+  font-family: "Heebo", sans-serif;
+
+  font-size: 6px;
+}
+
+
 .p_more{
   font-family: "Noto Sans KR", sans-serif;
   
@@ -132,13 +182,27 @@ margin: 0;
   font-weight: bold;
 
 }
+.gen-1 {
 
+  font-size: 15px;
+  font-family: "Heebo", sans-serif;
+  font-weight: bold;
+
+}
 .macc{
 font-family: "Noto Sans KR", sans-serif;
-font-size: 50px;
+font-size: 40px;
 font-weight: bold;
 margin:0px;
 padding: 10px;
+
+}
+.macc1 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0px;
+ 
 
 }
 
@@ -151,4 +215,26 @@ padding: 10px;
                 font-family: "Heebo", sans-serif;
 
    
+}
+@media screen and (min-width:769px) {
+
+.main-heigth{
+
+  width: 100%;
+      display: flex;
+      height: 250vh;
+      justify-content: center
+
+
+}
+}
+@media screen and ( max-width:768px) {
+
+  .main-heigth {
+
+    width: 100%;
+    display: flex;
+    height: 220vh;
+    justify-content: center
+  }
 }
