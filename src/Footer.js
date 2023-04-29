@@ -12,7 +12,14 @@ const Footer = function ({ data, nm }) {
 
   return (
 
-    <div className="foot">
+    <div style={{
+      width: '100%',
+      height: '35vh',
+      backgroundColor: 'black',
+      display: 'flex',
+      justifyContent: 'center',
+      marginTop: '10%',
+    }}>
 
       <div style={{
         width: '80%',

@@ -16,7 +16,6 @@ const router = createBrowserRouter([{
 
       loader: async ({ params }) => {
 
-        console.log(params.productname, '아이디')
 
         const rr = await axios(`/product/${params.productname}`, {
           method: 'GET',
@@ -36,7 +35,21 @@ const router = createBrowserRouter([{
       element: <Bike_inner ></Bike_inner>,
     },
     {
-      path: '/products', element: <Bike_Categori ></Bike_Categori>
+      path: '/products', loader: async () => {
+
+
+        const rr = await axios(`/products`, {
+          method: 'GET',
+          mode: 'no-cors',
+          headers: { "Access-Control-Allow-Origin": "*" },
+
+          withCredentials: true,
+          credentials: 'same-origin',
+        })
+
+        return rr.data;
+
+      }, element: <Bike_Categori ></Bike_Categori>
     }
 
   ]

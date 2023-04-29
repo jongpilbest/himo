@@ -45,37 +45,36 @@ const Bike_inner = function ({ }) {
 
     <div style={{
       width: '100%',
-      height: '300vh',
+
+
       position: 'relative',
 
 
 
     }}>
 
-      <div>
 
-      </div>
 
       <Switch_image da={data[0]}>
 
       </Switch_image>
 
 
-      <div
-        className="main-heigth"
-
-
+      <div style={{
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'center'
+      }}
       >
         <div style={{
           width: '80%',
-          height: '100px',
           flexDirection: 'column',
 
         }}>
 
           <div style={{
             width: '100%',
-            height: '500px',
+
             marginTop: '100px'
           }}>
 
@@ -95,7 +94,15 @@ const Bike_inner = function ({ }) {
 
 
         </div>
+
       </div>
+      <Pc>
+        <Footer></Footer>
+      </Pc>
+      <Mobile>
+
+      </Mobile>
+
 
 
     </div >
