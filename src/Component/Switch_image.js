@@ -369,6 +369,8 @@ const Switch_image = function ({ da }) {
             <div style={{
               width: '100%',
               height: '5vh',
+              display: 'flex',
+              justifyContent: 'flex-end'
 
             }}>
 

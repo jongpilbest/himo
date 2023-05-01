@@ -6,7 +6,7 @@ import { AiOutlineInstagram, AiFillYoutube } from "react-icons/ai";
 import { RiKakaoTalkFill } from "react-icons/ri";
 import { AiFillTwitterCircle, AiTwotoneCheckCircle } from "react-icons/ai";
 
-const footer1 = function ({ data, nm }) {
+const Footer1 = function ({ data, nm }) {
 
 
 
@@ -133,4 +133,4 @@ const footer1 = function ({ data, nm }) {
 
 }
 
-export default footer1
+export default Footer1

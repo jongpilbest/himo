@@ -43,10 +43,11 @@ const Nav_Com = function ({ data, nm }) {
     style={{
      width: '100%',
      height: '40px',
-
+     transform: 'translateY(-20%)',
      display: 'flex',
      justifyContent: 'center',
      alignItems: 'center',
+
 
     }}>
 

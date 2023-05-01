@@ -80,7 +80,7 @@ const Nav = function ({ }) {
 
             <div style={{
               width: '150px',
-              height: '40px',
+              height: '50px',
               display: 'flex',
 
               alignItems: 'center',
@@ -88,6 +88,7 @@ const Nav = function ({ }) {
               justifyContent: 'center',
 
               display: 'flex',
+
               flexDirection: 'column'
             }}>
               <div

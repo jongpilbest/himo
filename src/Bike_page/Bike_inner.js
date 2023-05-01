@@ -2,15 +2,13 @@
 
 import React, { useState, useEffect, useContext, useRef } from "react"
 import './Bike.css'
-import Nav from "../Component/nav"
-import Footer from "../Footer"
-import axios from "axios"
 
-import Bike_COm from "./Bike_COm"
-import Main_Bike from "./Main_Bike"
+import Footer from "../Footer"
+
+
+import Foot_Mobile from "../Component/Foot_Mobile"
 import Bike_You from "./Bike_You"
-import { AiOutlineDoubleLeft, AiOutlineDoubleRight } from "react-icons/ai";
-import { AiOutlineRight } from "react-icons/ai";
+
 import BIke_Image from "./BIke_Image"
 import Bike_Special from "./Bike_Special"
 import Switch_image from "../Component/Switch_image"
@@ -100,7 +98,7 @@ const Bike_inner = function ({ }) {
         <Footer></Footer>
       </Pc>
       <Mobile>
-
+        <Foot_Mobile></Foot_Mobile>
       </Mobile>
 
 

@@ -1,17 +1,15 @@
 
 
 import machine_1 from '../assets/machine_1.svg'
-import logo from './logo.svg';
-import Nav from './nav';
+
 import Sub_Com from './Sub_Com';
 import './Main.css'
 import { Link } from 'react-router-dom';
+import Foot_Mobile from './Foot_Mobile';
+import Footer from '../Footer';
 
-import { AiOutlineMore } from "react-icons/ai";
 import Change_Main from './Change_Main';
 import { AiOutlineRight } from "react-icons/ai";
-
-import axios from 'axios';
 
 
 
@@ -22,10 +20,7 @@ import Sub__Com from './Sub__Com';
 
 
 import Change__main from './Change__main';
-import { AiFillTwitterCircle, AiTwotoneCheckCircle } from "react-icons/ai";
-import { AiOutlineDown } from "react-icons/ai";
-import { AiOutlineInstagram } from "react-icons/ai";
-import { RiKakaoTalkFill } from "react-icons/ri";
+
 import Bike from '../assets/bike.svg'
 import zz from '../assets/z-16.svg'
 import yellow_bike from '../assets/yellow_bike.svg'
@@ -704,7 +699,9 @@ const Main = function ({ }) {
 
 
 
+        <Footer>
 
+        </Footer>
 
 
 
@@ -712,7 +709,7 @@ const Main = function ({ }) {
       <Mobile>
 
 
-        <div className='first-main'>
+        <div className='first-main-1'>
           <div className='first-main-sub1'>
             <div style={gogo()}
             >
@@ -1189,6 +1186,9 @@ const Main = function ({ }) {
           </div>
 
         </div>
+        <Foot_Mobile>
+
+        </Foot_Mobile>
 
       </Mobile >
 
