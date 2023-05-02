@@ -4,9 +4,7 @@
 import React, { useState, useEffect, useContext, useRef } from "react"
 
 import { Link } from "react-router-dom"
-const Nav_Com = function ({ data, nm }) {
-
-
+const Nav_Com = function ({ data, nm, gog }) {
 
 
  const Ref = useRef(null)
@@ -38,8 +36,6 @@ const Nav_Com = function ({ data, nm }) {
 
 
     }}
-
-    ref={Ref}
     style={{
      width: '100%',
      height: '40px',
@@ -49,10 +45,16 @@ const Nav_Com = function ({ data, nm }) {
      alignItems: 'center',
 
 
-    }}>
+    }}
+
+
+
+    ref={Ref}
+   >
 
     <p
-     className="main-text-text"
+     className={gog == 0 ? 'first-text' : "main-text-text"}
+
 
     >{data}</p>
 

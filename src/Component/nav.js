@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
 import { useMediaQuery } from "react-responsive"
 
+
 export const Mobile = ({ children }) => {
   const isMobile = useMediaQuery({
     query: "(max-width:768px)"
@@ -25,7 +26,7 @@ export const Pc = ({ children }) => {
 const Nav = function ({ }) {
 
   const Ref = useRef(null);
-
+  const Ref1 = useRef(null);
 
   const [click, setclick] = useState(false);
   const [cliick, setcliick] = useState(false);
@@ -36,31 +37,29 @@ const Nav = function ({ }) {
         <nav style={{
           width: '100%',
           height: '70px',
-          // backgroundColor: 'blue',
+
           display: 'flex',
           justifyContent: 'center',
           flexDirection: 'row',
 
+
         }} >
-          <div
-            className='nav_1'
-          >
-            <div
-              style={{
-                width: '150px',
-                height: '50%',
-                display: 'flex',
+          <div style={{
+            width: '80%',
+            height: '250px',
 
-                alignSelf: 'center',
-                justifyContent: 'center',
-                alignItems: 'center'
+            zIndex: 2,
+            display: 'flex'
 
-
-
-              }}
-            >
-
-
+          }}>
+            <div style={{
+              width: '200px',
+              height: '70px',
+              backgroundColor: 'white',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center'
+            }}>
 
               <Link
 
@@ -68,8 +67,8 @@ const Nav = function ({ }) {
               >
                 <img
                   style={{
-                    width: '110px',
-                    height: '25px',
+                    width: '80px',
+                    height: '20px',
 
 
                   }}
@@ -77,56 +76,67 @@ const Nav = function ({ }) {
                   src={require('../assets/logo.png')}></img>
               </Link>
             </div>
+            <div
+              onMouseLeave={() => {
+                Ref.current.style.display = 'none'
+              }}
 
-            <div style={{
-              width: '150px',
-              height: '50px',
-              display: 'flex',
+              style={{
+                width: '200px',
+                height: '200px',
 
-              alignItems: 'center',
-              alignSelf: 'center',
-              justifyContent: 'center',
 
-              display: 'flex',
-
-              flexDirection: 'column'
-            }}>
+              }}>
               <div
-                onMouseOver={() => {
-                  setclick(true);
-
+                onMouseEnter={() => {
+                  Ref.current.style.display = 'block'
                 }}
-                onMouseOut={() => {
-                  setclick(false);
-                }}
-
-
-                style={{
-                  width: '100%',
-                  height: '40px',
-
-                  position: 'relative',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center'
-                }}>
-                <p
-                  className="main-text"
-
-                > E-bike</p>
+                className="box-e-bike"
+              >
+                <div>
+                  <AiOutlineMenu></AiOutlineMenu>>
+                </div>
 
               </div>
-              <div style={{
-                width: '150px',
+              <div
 
-                backgroundColor: 'white',
-                position: 'absolute',
-                zIndex: 2,
-                top: '60px'
-              }}>
+                ref={Ref}
+                style={{
+                  display: 'none',
+                  backgroundColor: 'white'
+                }}>
+
+                <Link
+                  style={{
+                    textDecoration: 'none',
+                    color: 'black'
+                  }}
+
+                  to='/products'
+                >
+                  <div
+
+
+                    style={{
+                      width: '100%',
+                      height: '40px',
+                      transform: 'translateY(-20%)',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      backgroundColor: 'white'
+
+                    }}>
+                    <p>
+                      All E-Bike
+                    </p>
+                  </div>
+                </Link>
 
                 {
-                  click &&
+
+
+
                   ["HIMO Z16", "HIMO C26 MAX", "HIMO ZB20 MAX", "HIMO C30R MAX"]
                     .map((el, index) => {
                       return <Nav_Com
@@ -135,117 +145,8 @@ const Nav = function ({ }) {
                         key={index}
                       ></Nav_Com>
                     })
-
-
-
                 }
 
-
-              </div>
-
-
-
-            </div>
-
-
-
-
-            <div
-
-
-              style={{
-                width: '150px',
-                height: '40px',
-                display: 'flex',
-
-                alignItems: 'center',
-
-                alignSelf: 'center',
-                justifyContent: 'center',
-                display: 'flex',
-                flexDirection: 'column'
-              }}>
-              <div
-
-                onMouseOver={() => {
-                  setcliick(true);
-
-                }}
-                onMouseOut={() => {
-                  setcliick(false);
-                }}
-
-
-                style={{
-                  width: '100%',
-                  height: '40px',
-
-                  position: 'relative',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center'
-                }}>
-                <p
-                  className="main-text"
-
-                > Accessori</p>
-
-              </div>
-              <div style={{
-                width: '150px',
-
-                backgroundColor: 'white',
-                position: 'absolute',
-                zIndex: 2,
-                top: '60px'
-              }}>
-
-
-                {cliick &&
-                  ["Helments", "Alarms & Locks", "Fenders"]
-                    .map((el, index) => {
-                      return <Nav_Com
-                        nm={(el) => setcliick(el)}
-                        data={el}
-                        key={index}
-                      ></Nav_Com>
-                    })
-
-
-
-                }
-
-
-              </div>
-
-
-
-            </div>
-
-            <div style={{
-              width: '150px',
-              height: '40px',
-              display: 'flex',
-
-              alignItems: 'center',
-              alignSelf: 'center',
-
-              display: 'flex',
-              flexDirection: 'column'
-            }}>
-              <div style={{
-                width: '100%',
-                height: '40px',
-
-                position: 'relative',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center'
-              }}>
-                <p
-                  className="main-text"
-
-                > Support</p>
 
               </div>
 
@@ -256,6 +157,15 @@ const Nav = function ({ }) {
 
 
           </div>
+
+
+
+
+
+
+
+
+
 
 
 

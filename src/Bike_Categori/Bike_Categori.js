@@ -8,6 +8,7 @@ import Bike__CA_Com from "./Bike__CA_Com"
 import { AiOutlineRight } from "react-icons/ai";
 import { useLoaderData } from "react-router-dom"
 import { useMediaQuery } from "react-responsive";
+import Footer from "../Footer";
 
 export const Mobile = ({ children }) => {
   const isMobile = useMediaQuery({
@@ -88,7 +89,7 @@ const Bike_Categori = function () {
 
           </Bike__CA_Com>
         })}
-
+        <Footer></Footer>
 
 
 

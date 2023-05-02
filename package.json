@@ -13,7 +13,7 @@
     "react-router-dom": "^6.10.0",
     "react-scripts": "5.0.1"
   },
-  "proxy": "http://192.168.45.194:3000",
+  "proxy": "http://192.168.45.191:3000",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

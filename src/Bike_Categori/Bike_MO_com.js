@@ -5,6 +5,7 @@ import react from 'react'
 import { Link } from 'react-router-dom';
 import { AiOutlineRight } from "react-icons/ai";
 import { GiCarWheel, GiWeight } from "react-icons/gi";
+
 const Bike_MO_com = function ({ data }) {
 
  console.log(data, '여기데이터좀')
